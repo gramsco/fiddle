@@ -311,15 +311,10 @@ mongoose
 
 // }
 
-
-
 // userModel
 //     .create(dataUser)
 //     .then(dbres => console.log(dbres))
 //     .catch(err => console.log(err))
-
-
-
 
 
 // concertModel
