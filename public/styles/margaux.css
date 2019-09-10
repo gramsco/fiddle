@@ -2,19 +2,10 @@
   box-sizing: border-box;
 }
 
-:root {
-  --bleu-nuit: rgba(1, 23, 42, 1);
-  --bleu-moyen: rgba(0, 48, 90, 1);
-  --bleu-pale: rgba(34, 87, 135, 1);
-  --gris-moyen: rgba(206, 220, 232, 1);
-  --gris-pale: rgba(235, 241, 246, 1);
-  --highlighter: rgba(255, 159, 70, 1);
-}
-
 body {
   height: 100%;
   width: 100%;
-  background-image: url("img-noise-400x400.png");
+  background-image: url("/imgs/img-noise-400x400.png");
   background-repeat: repeat;
   color: #ff7c00;
   font-size: 2rem;
@@ -24,8 +15,19 @@ body {
 h1 {
   font-family: "Marck Script", cursive;
   font-size: 60px;
+  color: #ff7c00;
 }
 
+h2,
+h3,
+h4 {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+p,
+a {
+  font-family: "Red Hat Display", sans-serif;
+}
 /* // sign in */
 
 .login-btn {
@@ -60,6 +62,10 @@ h1 {
   font-family: "Red Hat Display", sans-serif;
 }
 
+.login-wrap {
+  margin-top: 40px;
+}
+
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: white;
@@ -85,8 +91,8 @@ input:focus {
 .button-link {
   text-decoration: none;
   font-size: 20px;
-  margin-top: 10px;
-  color: var(--highlighter);
+  margin-top: 190px;
+  color: white;
   font-family: "Red Hat Display", sans-serif;
   justify-content: center;
 }
@@ -96,6 +102,7 @@ input:focus {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
 }
 
 /* sign up to choose */
@@ -125,7 +132,7 @@ input:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 80px;
+  margin-top: 50px;
 }
 
 .choose-wrap {
@@ -133,6 +140,7 @@ input:focus {
   display: flex;
   justify-content: space-around;
   vertical-align: center;
+  margin-top: 40px;
 }
 
 .choose-btn {
@@ -141,10 +149,15 @@ input:focus {
   margin-top: 20px;
 }
 
+.btn-choose {
+  display: flex;
+  justify-content: center;
+  margin-top: 300px;
+}
+
 .button-link-choose {
   text-decoration: none;
   font-size: 20px;
-  margin-top: 50px;
   color: white;
   font-family: "Red Hat Display", sans-serif;
   display: flex;
@@ -160,7 +173,17 @@ input:focus {
 .button-link-choosen {
   text-decoration: none;
   font-size: 20px;
-  margin-top: 50px;
+  margin-top: 150px;
+  color: white;
+  font-family: "Red Hat Display", sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.button-link-choosen2 {
+  text-decoration: none;
+  font-size: 20px;
+  margin-top: 70px;
   color: white;
   font-family: "Red Hat Display", sans-serif;
   display: flex;

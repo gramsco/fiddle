@@ -2,17 +2,23 @@
     <header class="header">
         <h1 class="title">Fiddle</h1>
     </header>
-    <form method="post" action="/signup_choice" id="user">
-        <div class="choose-wrap">
+
+    <div class="choose-wrap">
+
+        <a href="/auth/musician">
             <div class="hover-choose">
                 <button class="choose-btn">Musician</button>
             </div>
+        </a>
+
+        <a href="/auth/listener">
             <div class="hover-choose">
                 <button class="choose-btn">Listener</button>
             </div>
-        </div>
-        <div class="btn-choose">
-            <a href="/signup_choice" class="button-link-choose">Sign In</a>
-        </div>
-    </form>
+        </a>
+    </div>
+
+    <div class="btn-choose">
+        <a href="/signup_choice" class="button-link-choose">Sign In</a>
+    </div>
 </section>

@@ -1,37 +1,12 @@
 * {
   box-sizing: border-box;
 }
-:root {
-  --bleu-nuit: rgba(1, 23, 42, 1);
-  --bleu-moyen: rgba(0, 48, 90, 1);
-  --bleu-pale: rgba(34, 87, 135, 1);
-  --gris-moyen: rgba(206, 220, 232, 1);
-  --gris-pale: rgba(235, 241, 246, 1);
-  --highlighter: rgba(255, 159, 70, 1);
-}
-
-body {
-  height: 100%;
-  background: var(--bleu-nuit);
-  font-size: 1.3rem;
-}
 
 li {
   list-style: none;
 }
-p,
-a {
-  font-family: "Open Sans Condensed", sans-serif;
-}
 
-h1,
-h2,
-h3,
-h4 {
-  font-family: "Julius Sans One", sans-serif;
-}
-
-main {
+.feed {
   display: flex;
   margin-left: 15vw;
   justify-content: flex-start;
@@ -39,7 +14,7 @@ main {
   height: 80vh;
 }
 
-section {
+.feed section {
   height: 100%;
   width: 33%;
   color: white;
@@ -47,45 +22,44 @@ section {
   overflow-y: scroll;
 }
 
-section::-webkit-scrollbar {
+.feed section::-webkit-scrollbar {
   width: 0 !important;
 }
 
-.container {
+.feed section.container {
   position: relative;
 }
 
-article {
-  border: solid 1px black;
+.feed section.container article {
   border-radius: 12px;
   padding: 5%;
   margin: 5%;
   overflow: hidden;
 }
 
-article:nth-child(odd) {
+.feed section.container article:nth-child(odd) {
   background: var(--bleu-moyen);
   color: var(--gris-pale);
 }
 
-article:nth-child(even) {
+.feed section.container article:nth-child(even) {
   background: var(--gris-moyen);
   color: var(--bleu-nuit);
 }
 
-section a {
+.feed section a {
   background: var(--highlighter);
 }
 
 @media (max-width: 700px) {
-  body {
+  /* body {
     height: 100%;
     background: var(--bleu-nuit);
     font-size: 0.8rem;
     width: 100vw;
-  }
+  } */
 
-  main {
+  .feed {
     display: flex;
     margin-left: 0;
     flex-direction: column-reverse;
@@ -96,7 +70,7 @@ section a {
     position: fixed;
   }
 
-  section {
+  .feed section {
     color: white;
     display: flex;
     flex-direction: row;
@@ -106,7 +80,7 @@ section a {
     height: 33%;
   }
 
-  .container {
+  .feed section.container {
     display: flex;
     flex-direction: row;
     width: auto;
@@ -116,22 +90,22 @@ section a {
     height: 100%;
   }
 
-  article:nth-child(odd) {
-    width:42vw;
+  .feed section.container article:nth-child(odd) {
+    width: 42vw;
   }
 
-  article:nth-child(even) {
-   width:60vw;
+  .feed section.container article:nth-child(even) {
+    width: 60vw;
   }
 
-  article {
+  .feed section.container article {
     border-radius: 12px;
     height: 100%;
     margin: 0;
     padding: 0;
   }
 
-  div.category {
+  .feed div.category {
     width: 50vw;
     border: 1px white solid;
   }
