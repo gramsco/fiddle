@@ -1,23 +1,20 @@
-const musicianModel = require(".././models/musician")
-const concertModel = require(".././models/concert")
-const critiqueModel = require(".././models/critique")
+const musicianModel = require(".././models/musician");
+const concertModel = require(".././models/concert");
+const critiqueModel = require(".././models/critique");
 const userModel = require(".././models/user");
 
+const mongoose = require("mongoose");
+require("dotenv").config();
 
-const mongoose = require("mongoose")
-require("dotenv").config()
-
-let pass = process.env.DB_PASS
-let pseudo = process.env.DB_USER
+let pass = process.env.DB_PASS;
+let pseudo = process.env.DB_USER;
 
 const uri = `mongodb+srv://${pseudo}:${pass}@cluster0-rcuew.gcp.mongodb.net/fiddle?retryWrites=true&w=majority`;
 
-
 mongoose
-    .connect(uri, { useNewUrlParser: true })
-    .then(() => console.log("connected to db"))
-    .catch(err => console.log(err))
-
+  .connect(uri, { useNewUrlParser: true })
+  .then(() => console.log("connected to db"))
+  .catch(err => console.log(err));
 
 // let dataMusician = [
 
@@ -240,7 +237,6 @@ mongoose
 
 //     }
 
-
 // ]
 
 // const dataCritiques =
@@ -254,15 +250,15 @@ mongoose
 //         concert: "5d77b4f2ef49c82947f598e7",
 //         user: "Thierry",
 //         title:""
-      
+
 //     },
 //     {
 //         concert: 5d77b4f2ef49c82947f598e8,
-      
+
 //     },
 //     {
 //         concert: 5d77b4f2ef49c82947f598e9,
-       
+
 //     },
 //     {
 //         concert: 5d77b4f2ef49c82947f598ea,
@@ -272,34 +268,32 @@ mongoose
 //     },
 //     {
 //         concert: 5d77b4f2ef49c82947f598ec,
-    
+
 //     },
 //     {
 //         concert: 5d77b4f2ef49c82947f598ed,
-        
+
 //     },
 //     {
 //         concert: 5d77b4f2ef49c82947f598ee,
-        
+
 //     },
 //     {
 //         concert: 5d77b4f2ef49c82947f598ef,
-      
+
 //     },
 //     {
 //         concert: 5d77b4f2ef49c82947f598f0,
-      
+
 //     },
 //     {
 //         concert: 5d77b4f2ef49c82947f598f1,
-       
+
 //     },
 //     {
 //         concert: 5d77b4f2ef49c82947f598f2,
-        
+
 //     }]
-
-
 
 // const dataUser = {
 
@@ -311,16 +305,10 @@ mongoose
 
 // }
 
-
-
 // userModel
 //     .create(dataUser)
 //     .then(dbres => console.log(dbres))
 //     .catch(err => console.log(err))
-
-
-
-
 
 // concertModel
 //     .insertMany(dataConcerts)
@@ -331,4 +319,3 @@ mongoose
 //     .insertMany(dataMusician)
 //     .then((dbres) => console.log(dbres))
 //     .catch(err => console.log(err))
-
