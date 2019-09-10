@@ -2,7 +2,7 @@ const express = require("express");
 const hbs = require("hbs");
 const path = require("path");
 const app = express();
-const artistModel = require("./models/artist.js");
+const musicianModel = require("./models/musician.js");
 const mongoose = require("mongoose");
 
 require("dotenv").config();
@@ -16,6 +16,8 @@ hbs.registerPartials(__dirname + "/views/partials");
 let auth = require("./routes/auth.js");
 let musician = require("./routes/musician.js");
 let user = require("./routes/user.js");
+let admin = require("./routes/admin.js");
+let concert = require("./routes/concert.js")
 
 let pass = process.env.DB_PASS;
 let pseudo = process.env.DB_USER;
@@ -28,7 +30,7 @@ mongoose
   .catch(err => console.log(err));
 
 app.get("/", (req, res) => {
-  artistModel.find().then(dbres => {
+  musicianModel.find().then(dbres => {
     res.render("user/index", { artists: dbres });
   });
 });
@@ -36,6 +38,10 @@ app.get("/", (req, res) => {
 app.use("/auth", auth);
 app.use("/musician", musician);
 app.use("/user", user);
+app.use("/admin", admin);
+app.use("/concert", concert);
+app.use("/musician",musician)
+
 
 app.listen(3000, () =>
   console.log("le serveur marche ici : http://localhost:3000")
