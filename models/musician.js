@@ -6,7 +6,9 @@ let musicianSchema = new mongoose.Schema(
         profile_image: String,
         name: String,
         instruments: Array,
-        date_ajout:Date
+        date_ajout:String,
+        solist:Boolean,
+        type: String
     }
 )
 

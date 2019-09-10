@@ -7,10 +7,14 @@ let concertSchema = new mongoose.Schema(
         date: Date,
         lieu: String, 
         adresse : String,
-        musician: Array, // IDS !!!!!
         passe: Boolean,
- // IDS !!!   
+        musician: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "musician"
+        }
     }
 )
 
-let artistModel = mongoose.model("artist", userSchema)
+let concertModel = mongoose.model("concert", concertSchema)
+
+module.exports = concertModel;
