@@ -1,1 +1,18 @@
-C'est super chouette
+<h1><a href="/musician/{{musician._id}}">{{musician.name}}</a> @ {{concert.lieu}}</h1>
+
+{{#if concert.passe}}
+<div>This concert took place already{{#if concert.date}}({{concert.date}}){{/if}}. Write a review?</div>
+{{/if}}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div>
+{{#each musician.instruments}}    
+#{{this}}
+{{/each}}
+</div>

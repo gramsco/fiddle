@@ -1,1 +1,8 @@
-C'EST LA BONNE PAGE
+<h1>{{user.username}}</h1>
+
+<h3>Here are your favorite musicians</h3>
+<ul>
+{{#each musicians}}
+<li><a href="/musician/{{this._id}}">{{this.name}}</a></li>
+{{/each}}
+</ul>

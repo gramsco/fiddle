@@ -1,1 +1,10 @@
-youpi voilà le musicien
+<h1>{{musician.name}}</h1>
+<h2>{{musician.type}}</h2>
+
+<div>List of all concerts by {{musician.name}} : </div>
+
+<ul>
+    {{#each concert}}
+    <li><a href="/concert/{{this._id}}">{{this.lieu}}</a></li>
+    {{/each}}
+</ul>
