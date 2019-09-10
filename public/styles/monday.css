@@ -30,21 +30,6 @@ body {
   /* background:var(--gris-moyen); */
 }
 
-<<<<<<< HEAD
-main {
-  display: grid;
-  margin: 0 5vw;
-  height: 80vh;
-  overflow: scroll;
-  width: 100%;
-}
-
-main > * {
-  height: 50px;
-  width: 50px;
-  background: rgba(255, 0, 0, 0.3);
-}
-=======
 
 /* main{
     display:grid;
@@ -60,7 +45,6 @@ main > *{
     width:50px;
     background:rgba(255,0,0,0.3);
 } */
->>>>>>> e14a85f2cbfb992f8d2dcb66e1614c86ce910de1
 
 nav {
   display: flex;

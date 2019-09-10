@@ -1,19 +1,9 @@
-<<<<<<< HEAD
-const express = require("express");
-const hbs = require("hbs");
-const path = require("path");
-const app = express();
-=======
 const express = require("express")
 const hbs = require("hbs")
 const path = require("path")
 const app = express()
 const artistModel = require("./models/artist.js")
 const mongoose = require("mongoose")
-
-
-
->>>>>>> e14a85f2cbfb992f8d2dcb66e1614c86ce910de1
 
 require("dotenv").config();
 
