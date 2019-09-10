@@ -1,18 +1,17 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-:root{
+:root {
+  --bleu-nuit: rgba(1, 23, 42, 1);
+  --bleu-moyen: rgba(0, 48, 90, 1);
+  --bleu-pale: rgba(34, 87, 135, 1);
+  --gris-moyen: rgba(206, 220, 232, 1);
+  --gris-pale: rgba(235, 241, 246, 1);
+  --highlighter: rgba(255, 159, 70, 1);
 
-    --bleu-nuit:rgba(1,23,42,1);
-    --bleu-moyen:rgba(0,48,90,1);
-    --bleu-pale:rgba(34,87,135,1);
-    --gris-moyen:rgba(206,220,232,1);
-    --gris-pale:rgba(235,241,246,1);
-    --highlighter:rgba(255,159,70,1);
-
-    /* --noir-bleu:rgba(15,9,52,1); */
-    /* --noir-bleu:rgba(17,10,64,1);
+  /* --noir-bleu:rgba(15,9,52,1); */
+  /* --noir-bleu:rgba(17,10,64,1);
     --bleu-gris:rgba(62,58,88,1);
     --vert-canard:rgba(51,184,166,1);
     --vert-deau:rgba(183,253,214,1);
@@ -20,19 +19,19 @@
     --blanc:white; */
 }
 
-body{
-    height:100%;
-    width:100%;
-    background-color:var(--gris-pale);
-    /* background-image: -webkit-linear-gradient(70deg,var(--gris-moyen) 45%,var(--gris-pale) 45%);
+body {
+  height: 100%;
+  width: 100%;
+  background-color: var(--gris-pale);
+  /* background-image: -webkit-linear-gradient(70deg,var(--gris-moyen) 45%,var(--gris-pale) 45%);
     min-height:100vh; */
-    color:var(--bleu-moyen);
-    font-size:2rem;
-    /* background:var(--gris-moyen); */
+  color: var(--bleu-moyen);
+  font-size: 2rem;
+  /* background:var(--gris-moyen); */
 }
 
 
-main{
+/* main{
     display:grid;
     margin:0 5vw;
     height:80vh;
@@ -45,80 +44,74 @@ main > *{
     height:50px;
     width:50px;
     background:rgba(255,0,0,0.3);
-}
-
+} */
 
 nav {
-    display:flex;
-    position:fixed;
-    bottom:0;
-    left:0;
-    height:20vh;
-    width:100%;
-    align-items:flex-end;   
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 20vh;
+  width: 100%;
+  align-items: flex-end;
 }
 
 .circle {
-    margin:2%;
-    width:70px;
-    height:70px;
-    border-radius:35px;
-    border:solid 1px black;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background:var(--noir-bleu);
-    color:white;
+  margin: 2%;
+  width: 70px;
+  height: 70px;
+  border-radius: 35px;
+  border: solid 1px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--noir-bleu);
+  color: white;
 }
 
-
-.circle:hover{
-    height:200px;
+.circle:hover {
+  height: 200px;
 }
 
-
-.searching{
-    margin:0 0 2%;
-    height:70px;
-    width:70px;
-    border:solid 1px var(--noir-bleu);
-    border-radius:35px;
-    color:white;
-    text-align:center;
-    display:flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    color:var(--noir-bleu);
+.searching {
+  margin: 0 0 2%;
+  height: 70px;
+  width: 70px;
+  border: solid 1px var(--noir-bleu);
+  border-radius: 35px;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  color: var(--noir-bleu);
 }
 
-
-#settings{
-    display:none;
+#settings {
+  display: none;
 }
 
-input{
-    display:none;
-    background:none;
-    border:none;
-    color:white;
-    font-size:1.1rem;
-    width:auto;    
+input {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  width: auto;
 }
 
-input:focus{
-    outline:none;
+input:focus {
+  outline: none;
 }
-
-
 
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
 }

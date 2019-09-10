@@ -4,7 +4,6 @@ const router = new express.Router();
 
 //SIGNUP
 
-
 router.get("/signup", (req, res) => {
 
     res.render("auth/signup_choice")
