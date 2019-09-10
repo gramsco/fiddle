@@ -1,124 +1,244 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-:root{
-
-    --bleu-nuit:rgba(1,23,42,1);
-    --bleu-moyen:rgba(0,48,90,1);
-    --bleu-pale:rgba(34,87,135,1);
-    --gris-moyen:rgba(206,220,232,1);
-    --gris-pale:rgba(235,241,246,1);
-    --highlighter:rgba(255,159,70,1);
-
-    /* --noir-bleu:rgba(15,9,52,1); */
-    /* --noir-bleu:rgba(17,10,64,1);
-    --bleu-gris:rgba(62,58,88,1);
-    --vert-canard:rgba(51,184,166,1);
-    --vert-deau:rgba(183,253,214,1);
-    --gris-moyen:rgba(239,239,239,1);
-    --blanc:white; */
+:root {
+  --bleu-nuit: rgba(1, 23, 42, 1);
+  --bleu-moyen: rgba(0, 48, 90, 1);
+  --bleu-pale: rgba(34, 87, 135, 1);
+  --gris-moyen: rgba(206, 220, 232, 1);
+  --gris-pale: rgba(235, 241, 246, 1);
+  --highlighter: rgba(255, 159, 70, 1);
 }
 
-body{
-    height:100%;
-    width:100%;
-    background-color:var(--gris-pale);
-    /* background-image: -webkit-linear-gradient(70deg,var(--gris-moyen) 45%,var(--gris-pale) 45%);
-    min-height:100vh; */
-    color:var(--bleu-moyen);
-    font-size:2rem;
-    /* background:var(--gris-moyen); */
+body {
+  height: 100%;
+  width: 100%;
+  background-image: url("img-noise-400x400.png");
+  background-repeat: repeat;
+  color: #ff7c00;
+  font-size: 2rem;
+  font-family: "Red Hat Display", sans-serif;
 }
 
-
-main{
-    display:grid;
-    margin:0 5vw;
-    height:80vh;
-    overflow:scroll;
-    width:100%;
-    
+h1 {
+  font-family: "Marck Script", cursive;
+  font-size: 60px;
 }
 
-main > *{
-    height:50px;
-    width:50px;
-    background:rgba(255,0,0,0.3);
+/* // sign in */
+
+.login-btn {
+  width: 70px;
+  height: 70px;
+  border-radius: 35px;
+  border: none;
+  display: flex;
+  align-items: center;
+  background: #ffbe45;
+  color: white;
+  flex-direction: column;
+  margin-top: 60px;
+  vertical-align: center;
+  outline: none;
 }
 
-
-nav {
-    display:flex;
-    position:fixed;
-    bottom:0;
-    left:0;
-    height:20vh;
-    width:100%;
-    align-items:flex-end;   
+.login-circle {
+  width: 200px;
+  height: 70px;
+  border-radius: 70px;
+  border: none;
+  display: flex;
+  background-color: #ff7c00;
+  background-image: -webkit-linear-gradient(20deg, #ff7c00 40%, #ffbe45 60%);
+  color: white;
+  font-size: 20px;
+  flex-direction: column;
+  margin-top: 10px;
+  text-align: center;
+  outline: none;
+  font-family: "Red Hat Display", sans-serif;
 }
 
-.circle {
-    margin:2%;
-    width:70px;
-    height:70px;
-    border-radius:35px;
-    border:solid 1px black;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background:var(--noir-bleu);
-    color:white;
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  /* Firefox */
 }
 
+/* .login-circle:hover {
+  width: 200px;
+  text-align: center;
+} */
 
-.circle:hover{
-    height:200px;
+input:focus {
+  outline: none;
+  width: 200px;
+  text-align: center;
 }
 
-
-.searching{
-    margin:0 0 2%;
-    height:70px;
-    width:70px;
-    border:solid 1px var(--noir-bleu);
-    border-radius:35px;
-    color:white;
-    text-align:center;
-    display:flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    color:var(--noir-bleu);
+.hover-center {
+  display: flex;
+  justify-content: center;
 }
 
-
-#settings{
-    display:none;
+.button-link {
+  text-decoration: none;
+  font-size: 20px;
+  margin-top: 10px;
+  color: var(--highlighter);
+  font-family: "Red Hat Display", sans-serif;
+  justify-content: center;
 }
 
-input{
-    display:none;
-    background:none;
-    border:none;
-    color:white;
-    font-size:1.1rem;
-    width:auto;    
+.sign-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-input:focus{
-    outline:none;
+/* sign up to choose */
+
+.choose-btn {
+  width: 150px;
+  height: 150px;
+  border-radius: 80px;
+  border: none;
+  display: flex;
+  background-color: #ff7c00;
+  background-image: -webkit-linear-gradient(20deg, #ff7c00 40%, #ffbe45 60%);
+  color: white;
+  font-size: 30px;
+  margin-top: 10px;
+  outline: none;
+  font-family: "Red Hat Display", sans-serif;
 }
 
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  /* Firefox */
+}
 
+.choose-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+}
 
-.noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome and Opera */
+.choose-wrap {
+  width: 25vw;
+  display: flex;
+  justify-content: space-around;
+  vertical-align: center;
+}
+
+.choose-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button-link-choose {
+  text-decoration: none;
+  font-size: 20px;
+  margin-top: 50px;
+  color: white;
+  font-family: "Red Hat Display", sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.hover-choose:hover {
+  transform: scale(1.1);
+}
+
+/* //signup choosen */
+
+.button-link-choosen {
+  text-decoration: none;
+  font-size: 20px;
+  margin-top: 50px;
+  color: white;
+  font-family: "Red Hat Display", sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+/* .hover-center-chosen {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+} */
+
+/* Place Holder CSS */
+::-webkit-input-placeholder {
+  color: white;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+:-moz-placeholder {
+  color: white;
+  opacity: 0.5;
+  -moz-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+::-moz-placeholder {
+  color: white;
+  opacity: 0.5;
+  -moz-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+:-ms-input-placeholder {
+  color: white;
+  opacity: 0.5;
+  -ms-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+
+/* Place Holder CSS for Focus */
+:hover::-webkit-input-placeholder {
+  opacity: 0.75;
+  -webkit-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+:hover:-moz-placeholder {
+  opacity: 0.75;
+  -moz-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+:hover::-moz-placeholder {
+  opacity: 0.75;
+  -moz-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+:hover:-ms-input-placeholder {
+  opacity: 0.75;
+  -ms-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+
+/* Place Holder CSS for Focus */
+:focus::-webkit-input-placeholder {
+  opacity: 0;
+  -webkit-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+:focus:-moz-placeholder {
+  opacity: 0;
+  -moz-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+:focus::-moz-placeholder {
+  opacity: 0;
+  -moz-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+:focus:-ms-input-placeholder {
+  opacity: 0;
+  -ms-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
 }
