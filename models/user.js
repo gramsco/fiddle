@@ -3,13 +3,15 @@ const mongoose = require("mongoose")
 let userSchema = new mongoose.Schema(
     
     {
+        profile_image:String,
         username: String,
         password: String,
-        email:String,
-        artist: String, // OBJECTID !!!!
+        email: String,
         fav_musicians: Array,
-        instruments: Array,
+        concerts:Array
     }
 )
 
 let userModel = mongoose.model("users",userSchema)
+
+module.exports = userModel;

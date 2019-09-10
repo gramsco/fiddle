@@ -3,10 +3,13 @@ const mongoose = require("mongoose")
 let concertSchema = new mongoose.Schema(
 
     {
+        nom:String, // pas obligatoire
         date: Date,
-        salle: String, //ID !!!
+        lieu: String, 
+        adresse : String,
         musician: Array, // IDS !!!!!
-        critique:Array // IDS !!!   
+        passe: Boolean,
+ // IDS !!!   
     }
 )
 
