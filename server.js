@@ -4,6 +4,10 @@ const path = require("path");
 const app = express();
 const musicianModel = require("./models/musician.js");
 const mongoose = require("mongoose");
+const bodyParser = require("body-parser")
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
 
 require("dotenv").config();
 
@@ -18,6 +22,7 @@ let musician = require("./routes/musician.js");
 let user = require("./routes/user.js");
 let admin = require("./routes/admin.js");
 let concert = require("./routes/concert.js")
+let critic = require("./routes/critic.js")
 
 let pass = process.env.DB_PASS;
 let pseudo = process.env.DB_USER;
@@ -41,6 +46,7 @@ app.use("/user", user);
 app.use("/admin", admin);
 app.use("/concert", concert);
 app.use("/musician",musician)
+app.use("/critic",critic)
 
 
 app.listen(3000, () =>

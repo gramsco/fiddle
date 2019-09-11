@@ -5,7 +5,10 @@ const mongoose = require("mongoose")
 let critiqueSchema = new mongoose.Schema(
 
     {
-        user: String, // ID
+        user: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "user"
+        }, // ID
         title:String,
         text: String, // Limiter le nombre de charactères
         concert: {

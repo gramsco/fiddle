@@ -239,61 +239,100 @@ mongoose
 
 // ]
 
-// const dataCritiques =
-//     [{
-//         concert: "5d77b4f2ef49c82947f598e6",
-//         user: "Blabla",
-//         title:"Super concert",
-//         text:"Lorem ipsum blablablabla content gnagnagna"
-//     },
-//     {
-//         concert: "5d77b4f2ef49c82947f598e7",
-//         user: "Thierry",
-//         title:""
+const dataCritiques = [
+  {
+    concert: "5d77b4f2ef49c82947f598e6",
+    user: "5d77b9d62ae66f2c11c49399",
+    title: "Super concert",
+    text: "Lorem ipsum blablablabla content gnagnagna"
+  },
+  {
+    concert: "5d77b4f2ef49c82947f598e7",
+    user: "5d77b9d62ae66f2c11c49399",
+    title: "Une vraie déception",
+    text: "C'était moins bien que ce que je pensais"
 
-//     },
-//     {
-//         concert: 5d77b4f2ef49c82947f598e8,
+  },
+  {
+    concert: "5d77b4f2ef49c82947f598e8",
+    user: "5d77b9d62ae66f2c11c49399",
+    title: "WAH ! Quelle surprise !",
+    text: "J'ai voyagé. Vraiment."
 
-//     },
-//     {
-//         concert: 5d77b4f2ef49c82947f598e9,
+  },
+  {
+    concert: "5d77b4f2ef49c82947f598e9",
+    user: "5d77b9d62ae66f2c11c49399",
+    title: "Merveille des merveilles",
+    text: "C'était mieux et encore mieux que mieux"
 
-//     },
-//     {
-//         concert: 5d77b4f2ef49c82947f598ea,
-//     },
-//     {
-//         concert: 5d77b4f2ef49c82947f598eb,
-//     },
-//     {
-//         concert: 5d77b4f2ef49c82947f598ec,
+  },
+  {
+    concert: "5d77b4f2ef49c82947f598ea",
+    user: "5d77b9d62ae66f2c11c49399",
+    title: "Bof",
+    text: "L'improvisation atonale de huit heures était un peu boring"
+  },
+  {
+    concert: "5d77b4f2ef49c82947f598eb",
+    user: "5d77b9d62ae66f2c11c49399",
+    title: "Pas mal du tout",
+    text: "Vraiment un super concert. Et super chips."
+  },
+  {
+    concert: "5d77b4f2ef49c82947f598ec",
+    user: "5d77b9d62ae66f2c11c49399",
+    title: "Low-Rem Hip-Sum",
+    text: "Eh ouais, carrément, même."
 
-//     },
-//     {
-//         concert: 5d77b4f2ef49c82947f598ed,
+  },
+  {
+    concert: "5d77b4f2ef49c82947f598ed",
+    user: "5d77b9d62ae66f2c11c49399",
+    title: "Ô Grands dieux !",
+    text: "C'était tip-top !!!"
 
-//     },
-//     {
-//         concert: 5d77b4f2ef49c82947f598ee,
+  },
+  {
+    concert: "5d77b4f2ef49c82947f598ee",
+    user: "5d77b9d62ae66f2c11c49399",
+    title: "Vachement chouette",
+    text: "Mais aussi chouettement vache"
 
-//     },
-//     {
-//         concert: 5d77b4f2ef49c82947f598ef,
+  },
+  {
+    concert: "5d77b4f2ef49c82947f598ef",
+    user: "5d77b9d62ae66f2c11c49399",
+    title: "Veramente incredibile",
+    text: "E la prima volta che vedo un concerto cosi' bello"
 
-//     },
-//     {
-//         concert: 5d77b4f2ef49c82947f598f0,
+  },
+  {
+    concert: "5d77b4f2ef49c82947f598f0",
+    user: "5d77b9d62ae66f2c11c49399",
+    title: "Je n'ai pas les mots",
+    text: "... tellement ce concert était super !"
 
-//     },
-//     {
-//         concert: 5d77b4f2ef49c82947f598f1,
+  },
+  {
+    concert: "5d77b4f2ef49c82947f598f1",
+    user: "5d77b9d62ae66f2c11c49399",
+    title: "Pas mal, vraiment pas mal",
+    text: "Pas bien non plus, mais vraiment pas mal"
 
-//     },
-//     {
-//         concert: 5d77b4f2ef49c82947f598f2,
+  },
+  {
+    concert: "5d77b4f2ef49c82947f598f2",
+    user: "5d77b9d62ae66f2c11c49399",
+    title: "INCROYABLE",
+    text: "Le plus beau des plus beaux concerts"
+  }
+]
 
-//     }]
+critiqueModel
+  .create(dataCritiques)
+  .then(dbres => console.log(dbres))
+  .catch(err => console.log(err))
 
 // const dataUser = {
 

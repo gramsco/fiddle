@@ -1,0 +1,24 @@
+{{!-- favs: dbUser.fav_musicians,
+musicians:dbMusicians --}}
+<h3> <a href="/user/{{id}}"><- back to your profile</a></h3>
+<div>
+    <h2>Your favs</h2>
+    <ul>
+        {{#each favs}}
+        <li>{{this.name}} <span class="less">(-)</span></li>
+        {{/each}}
+    </ul>
+</div>
+
+<div>
+    <h2>The Musicians</h2>
+    <div>
+    <label for="name">Name</label>
+    <input type="text">
+    </div>
+    <ul>
+        {{#each musicians}}
+        <li>{{this.name}} <span class="more">(+)</span> </li>
+        {{/each}}
+    </ul>
+</div>
