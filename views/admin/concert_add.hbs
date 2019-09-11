@@ -1,0 +1,43 @@
+<form action="/admin/concert/add" method="post">
+    <div>
+        <label for="name">Name of the concert</label>
+        <input type="text" for="name" name="nom" placeholder="name">
+    </div>
+
+    <div>
+        <label for="place">Name of the location</label>
+        <input required type="text" for="name" name="lieu">
+    </div>
+
+    <div>
+        <label for="date">Date</label>
+        <input required type="date" value="2019-09-01" name="date">
+    </div>
+
+    <div>
+        <label for="adresse">Address</label>
+        <input required type="text" name="adresse">
+    </div>
+
+
+    <div>
+        <label for="musician">Musician</label>
+        {{#if musicians}}
+        <select name="musician" id="pet-select">
+            <option value="">--Please choose an option--</option>
+            {{#each musicians}}
+            <option name="musician" value="{{this.name}}">{{this.name}}</option>
+            {{/each}}
+        </select>
+        {{/if}}
+    </div>
+
+    <div>
+        <label for="price">Price (in €)</label>
+        <input required type="number" min="0" max="Infinity" name="price">
+    </div>
+    
+    <input style="display:none" type="text" name="id">
+
+    <button value="send">Confirm</button>
+</form>

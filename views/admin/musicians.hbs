@@ -1,0 +1,12 @@
+{{>header_management}}
+
+
+{{#each musicians}}
+
+<div>
+    <h2>{{this.name}}</h2>
+    <div>{{this.type}}</div>
+    <div><button><a href="/admin/musicians/{{this._id}}">Edit</a></button><button>Delete</button> </div>
+</div>
+<hr>
+{{/each}}
