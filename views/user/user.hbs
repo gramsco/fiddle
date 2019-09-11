@@ -1,8 +1,26 @@
+<img src="{{user.img}}" alt="Your profile picture">
 <h1>{{user.username}}</h1>
+<span> <a href="/user/{{user._id}}/edit"> Edit your profile</a></span>
 
-<h3>Here are your favorite musicians</h3>
+<h3>Here are {{user.username}}'s favs</h3>
+<span> <a href="/user/{{user._id}}/favs"> Edit your favorite musicians</a></span>
+
 <ul>
 {{#each musicians}}
 <li><a href="/musician/{{this._id}}">{{this.name}}</a></li>
 {{/each}}
 </ul>
+
+<h3>Here are {{user.username}}'s reviews</h3>
+
+<ul>
+    {{#each critiques}}
+    <li><a href="/critic/{{this._id}}">{{this.title}}</a></li>
+    {{/each}}
+</ul>
+
+{{#each musicians}}
+{{#each this.instruments}}
+#{{this}}
+{{/each}}
+{{/each}}

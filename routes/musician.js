@@ -3,9 +3,6 @@ const router = new express.Router();
 const musicianModel = require("../models/musician")
 const concertModel = require("../models/concert")
 
-
-
-
 router.get("/:id", (req, res) => {
 
     musicianModel
@@ -26,7 +23,6 @@ router.get("/:id", (req, res) => {
         .catch(err => console.log(err))
     
     
-
 })
 
 

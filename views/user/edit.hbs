@@ -1,0 +1,14 @@
+<form action="/user/{{this._id}}/edit" method="post">
+    <div>
+    <label id="username">Username</label>
+    <input id="username" type="text" name="username" value={{this.username}}>
+    </div>
+
+    <div>
+    <label id="email">Email</label>
+    <input id="email" type="email" name="email" value={{this.email}}>
+    <div>
+    <button value="submit">Confirm</button>
+    </div>
+    </div>
+</form>
