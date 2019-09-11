@@ -1,0 +1,30 @@
+<form action="/admin/concert/edit" method="post">
+    <div>
+        <label for="name">Name of the concert</label>
+        <input type="text" for="name" name="nom" placeholder="name" value="{{this.name}}">
+    </div>
+
+    <div>
+        <label for="place">Name of the location</label>
+        <input type="text" for="name" name="lieu" value="{{this.lieu}}">
+    </div>
+
+    <div>
+        <label for="date">Date</label>
+        <input type="date" value="2019-09-01" name="date" value="{{this.date}}">
+    </div>
+
+    <div>
+        <label for="adresse">Address</label>
+        <input type="text" name="adresse" value="{{this.adresse}}">
+    </div>
+
+    <div>
+        <label for="price">Price (in €)</label>
+        <input type="number" min="0" max="Infinity" name="price" value="{{this.price}}">
+    </div>
+
+    <input style="display:none" type="text" name="id" value="{{this._id}}">
+
+    <button value="send">Confirm</button>
+</form>

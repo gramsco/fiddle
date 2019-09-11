@@ -1,22 +1,37 @@
+{{>header_management}}
+
 <div>
-    <h3>Manage Concerts</h3>
+    <h3>Concerts Management</h3>
 
-    <div>Concert Name</div>
-    <div>Place</div>
-    <div>Adress</div>
-    <div>Date</div>
-    <div>Edit</div>
-    <div>Delete</div>
-    <div>Add</div>
+    <a href="/admin/concert/add"><button>Add a concert</button></a>
 
-
+<hr>
     {{#each concert}}
-    <ul>
-        <li>{{this.lieu}} : {{this.date}} | edit | remove |
-        </li>
-    </ul>
 
+    <div>
+        <h2>
+        
+        {{#if this.nom}}
+        {{this.nom}}
+        {{else}}
+        Untitled
+        {{/if}}
+        {{#if this.passe}}
+        <span>(over)</span>
+        {{/if}}
+        </h2>
+        <div>{{this.lieu}}</div>
+        <div>{{this.adresse}}</div>
+        <div>{{this.date}}</div>
+        {{#if this.price}}
+        <div>{{this.price}} €</div>
+        {{/if}}
+       
+        <div><button><a href="/admin/concerts/{{this._id}}">Edit</a></button><button>Delete</button> </div>
+    </div>
+    <hr>
     {{/each}}
+
     {{#unless concert}}
 
     <div>No concerts yet !</div>

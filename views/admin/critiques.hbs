@@ -1,1 +1,9 @@
-critiques
+{{>header_management}}
+
+
+{{#each critics}}
+<div>
+    "{{this.title}}" – {{this.username}} <button>see critic</button> <button>delete</button>
+</div>
+<hr>
+{{/each}}

@@ -1,0 +1,39 @@
+<form action="/admin/musicians/edit" method="post">
+
+
+{{!-- { instruments: [ 'Clarinette' ],
+_id: 5d77b26371437725d78817b1,
+profile_image: '',
+name: 'Alexis Jarousky',
+solist: true,
+type: 'solo artist',
+__v: 0 } --}}
+
+
+ 
+    <div>
+        <label for="name">Name of the artist</label>
+        <input type="text" for="name" name="name" placeholder="name" value="{{this.name}}">
+    </div>
+
+    <div>
+        <label for="place">Type</label>
+        <input type="text" for="name" name="type" value="{{this.type}}">
+    </div>
+
+    {{#each this.instruments}}
+    <div>
+        <label for="date">Current instrument</label>
+        <input type="text" name="instrument" value="{{this}}">
+    </div>
+    {{/each}}
+    <div>
+        <label for="date">New Instrument</label>
+        <input type="text" name="instrument">
+    </div>
+
+
+    <input style="display:none" type="text" name="id" value="{{this._id}}">
+
+    <button value="send">Confirm</button>
+</form>
