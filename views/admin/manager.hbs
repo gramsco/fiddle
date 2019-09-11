@@ -1,0 +1,52 @@
+{{!-- Edit --}}
+
+<section>
+    <div class="big-container product-manage-wrapper flexed-item">
+        <form action="/concert/concert_add" method="post" class="add-concert-form">
+
+            <h3 class="form-title">Add a Concert</h3>
+
+            <div class="form-concert-wrapper flexed-item">
+                <label for="concert-name" class="label-name label">Name</label>
+                <input id="concert-name" type="text" class="input-text input" placeholder="The fiddle"
+                    name="concert_name">
+            </div>
+            <div class="form-concert-wrapper flexed-item">
+                <label for="concert_date" class="label-date label">Date</label>
+                <input id="" type="text" class="input-text input" placeholder="ex: NV23498" name="concert_date">
+            </div>
+            <div class="form-concert-wrapper flexed-item">
+                <label for="concert_place" class="label-place label">Place</label>
+                <input id="concert_place" type="text" class="input-text input" placeholder="ex: 37"
+                    name="concert_place">
+            </div>
+            <div class="form-concert-wrapper flexed-item">
+                <label for="concert_adress" class="label-adress label">Adress</label>
+                <input id="concert_adress" type="text" class="input-text input" placeholder="First at your left"
+                    name="concert_adress">
+            </div>
+
+            <div class="form-concert-wrapper flexed-item">
+                <label for="category" class="label-main-cat label">Main category</label>
+                <select id="category" class="select" required name="concert_category">
+                    <option value="-1" disabled selected>Choose a category</option>
+                    <option value="solist">Solist</option>
+                    <option value="band">Band</option>
+                    <option value="Orchestra">Orchestra</option>
+                </select>
+                <div>
+                    <h3 class="title">Add tags</h3>
+                    <div class="form-concert-wrapper flexed-item">
+                        <label for="category-name" class="category-name label">Concert tag</label>
+                        <input id="new_tag_name" type="text" class="input" placeholder="ex: Gangsta"
+                            name="concerts_tag">
+                    </div>
+                    <button id="btn_new_tag" class="btn">Create a new tag</button>
+                </div>
+            </div>
+    </div>
+    <div class="form-concert-wrapper flexed-item">
+        <button class="btn_concert" type="button" value="submit">Add this concert</button>
+    </div>
+    </form>
+</section>
