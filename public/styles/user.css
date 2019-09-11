@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+.user-title {
+  font-family: "Marck Script", cursive;
+  font-size: 60px;
+  color: #ff7c00;
+  margin-top: 20px;
+}
+
+h2 {
+  font-family: "Marck Script", cursive;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* .text_user {
+  text-decoration: none;
+} */
+
+.general_user_container {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.general_user_container > * {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.fav-container {
+  border-radius: 20px;
+  width: 400px;
+  border: solid 0.5px white;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+.review-container {
+  border-radius: 20px;
+  width: 400px;
+  border: solid 0.5px white;
+  margin-bottom: 80px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+.critics-container {
+  border-radius: 20px;
+  width: 400px;
+  border: solid 0.5px white;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  margin-top: 30px;
+}
+
+.user-text {
+  font-family: "Red Hat Display", sans-serif;
+  color: white;
+  font-size: 20px;
+  margin: auto;
+  align-content: center;
+}
+
+.user-text-main {
+  font-family: "Red Hat Display", sans-serif;
+  color: white;
+  font-size: 15px;
+}
+
+.img-user {
+  margin-top: 80px;
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+}
+
+.edit-musician {
+  text-align: center;
+}

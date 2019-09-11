@@ -1,26 +1,40 @@
-<img src="{{user.img}}" alt="Your profile picture">
-<h1>{{user.username}}</h1>
-<span> <a href="/user/{{user._id}}/edit"> Edit your profile</a></span>
+<section class="general_user_container">
+    {{!-- <img src="{{user.img}}" alt="Your profile picture"> --}}
+    <img src="/imgs/Orange.jpg" alt="Your profile picture" class="img-user">
+    <h1 class="user-title">{{user.username}}</h1>
+    <span> <a href="/user/{{user._id}}/edit" style="text-decoration: none" class="user-text-main"> Edit your
+            profile</a></span>
 
-<h3>Here are {{user.username}}'s favs</h3>
-<span> <a href="/user/{{user._id}}/favs"> Edit your favorite musicians</a></span>
+    <div class="fav-container">
+        <h2>{{user.username}}'s favs</h2>
+        <span> <a href="/user/{{user._id}}/favs" style="text-decoration: none" class="user-text"> Edit your favorite
+                musicians</a></span>
 
-<ul>
-{{#each musicians}}
-<li><a href="/musician/{{this._id}}">{{this.name}}</a></li>
-{{/each}}
-</ul>
+        <div>
+            {{#each musicians}}
+            <div class="edit-musician"><a href="/musician/{{this._id}}" class="user-text"
+                    style="text-decoration: none">{{this.name}}</a>
+            </div>
+            {{/each}}
+        </div>
+    </div>
 
-<h3>Here are {{user.username}}'s reviews</h3>
+    <div class="review-container">
+        <h2>{{user.username}}'s reviews</h2>
+        {{#each critiques}}
+        <div class="edit-musician"><a href="/critic/{{this._id}}" style="text-decoration: none"
+                class="user-text">{{this.title}}</a>
+            {{/each}}
+        </div>
+    </div>
+    <div class="critics-container">
+        <div class="edit-musician">
 
-<ul>
-    {{#each critiques}}
-    <li><a href="/critic/{{this._id}}">{{this.title}}</a></li>
-    {{/each}}
-</ul>
-
-{{#each musicians}}
-{{#each this.instruments}}
-#{{this}}
-{{/each}}
-{{/each}}
+            {{#each musicians}}
+            {{#each this.instruments}}
+            #{{this}}
+            {{/each}}
+            {{/each}}
+        </div>
+    </div>
+</section>

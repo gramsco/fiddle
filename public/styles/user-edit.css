@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+.user-edit-container {
+  display: flex;
+  justify-content: center;
+  border: 0.5px solid white;
+  border-radius: 20px;
+  width: 600px;
+  padding-bottom: 40px;
+}
+
+.user-edit-wraper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-btn {
+  text-align: center;
+}
