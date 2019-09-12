@@ -1,1 +1,11 @@
-voici la page des users
+{{>header_management}}
+Users Management
+<a href="/admin/users/add"><button>Add a user</button></a>
+<hr>
+{{#each allUsers}}
+<div id={{this._id}}>
+<div>{{this.username}}</div>
+<button>Edit</button><button>Delete</button>
+</div>
+<hr>
+{{/each}}

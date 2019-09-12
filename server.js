@@ -2,7 +2,7 @@ const express = require("express");
 const hbs = require("hbs");
 const path = require("path");
 const app = express();
-const musicianModel = require("./models/musician.js");
+
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser")
 
@@ -34,11 +34,34 @@ mongoose
   .then(() => console.log("connected to DataBase"))
   .catch(err => console.log(err));
 
+
+
+const musicianModel = require("./models/musician.js");
+const critiqueModel = require("./models/critique");
+const concertModel = require("./models/concert.js");
+const userModel = require("./models/user");
+
 app.get("/", (req, res) => {
-  musicianModel.find().then(dbres => {
-    res.render("user/index", { artists: dbres });
-  });
-});
+  musicianModel
+    .find()
+    .then(artists => {
+      critiqueModel
+        .find()
+        .then(critiques => {
+          console.log(critiques)
+          console.log(`y'a ${critiques.length} critiques`)
+          concertModel
+            .find()
+            .then(concerts => {
+              console.log(`y'a ${concerts.length} concerts`)
+              console.log("pfiouh all went fine, man.")
+              res.render("user/index", { artists,critiques,concerts });
+            })
+        })
+    })
+})
+      
+    
 
 app.use("/auth", auth);
 app.use("/musician", musician);

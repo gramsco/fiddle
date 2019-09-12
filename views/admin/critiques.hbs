@@ -1,9 +1,15 @@
 {{>header_management}}
 
+{{#unless critics}}
+<div>Nothing to manage, here</div>
+{{/unless}}
 
+<div class="all-critics">
 {{#each critics}}
-<div>
-    "{{this.title}}" – {{this.username}} <button>see critic</button> <button>delete</button>
+<div data-id={{this._id}}>
+    "{{this.title}}" – {{this.username}} <button class="see-btn" >see critic</button> <button class="delete-btn">delete</button>
 </div>
 <hr>
 {{/each}}
+</div>
+

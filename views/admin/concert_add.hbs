@@ -1,8 +1,4 @@
 <form action="/admin/concert/add" method="post">
-    <div>
-        <label for="name">Name of the concert</label>
-        <input type="text" for="name" name="nom" placeholder="name">
-    </div>
 
     <div>
         <label for="place">Name of the location</label>
@@ -15,10 +11,9 @@
     </div>
 
     <div>
-        <label for="adresse">Address</label>
-        <input required type="text" name="adresse">
+        <label for="time">Time</label>
+        <input type="time" required value="20:00" min="00:00" max="23:59" name="time">
     </div>
-
 
     <div>
         <label for="musician">Musician</label>
@@ -26,17 +21,30 @@
         <select name="musician" id="pet-select">
             <option value="">--Please choose an option--</option>
             {{#each musicians}}
-            <option name="musician" value="{{this.name}}">{{this.name}}</option>
+            <option name="musician" value="{{this._id}}">{{this.name}}</option>
             {{/each}}
         </select>
         {{/if}}
     </div>
 
+  
+
+   
+
+    <div>
+        <label for="adresse">Address</label>
+        <input required type="text" name="adresse">
+    </div>
+
+
+
+
+
     <div>
         <label for="price">Price (in €)</label>
         <input required type="number" min="0" max="Infinity" name="price">
     </div>
-    
+
     <input style="display:none" type="text" name="id">
 
     <button value="send">Confirm</button>

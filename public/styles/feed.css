@@ -2,8 +2,37 @@
   box-sizing: border-box;
 }
 
-li {
-  list-style: none;
+.mainframe{
+  width:84vw;
+  height:80vh;
+  margin-left:15vw;
+  display:flex;
+  justify-content: space-around;
+}
+
+.feed h2{
+  background:black;
+  position:absolute;
+  top:0;
+  width:10vw;
+}
+
+.card{
+  position:relative;
+}
+
+.card{
+  border:1px white solid;
+  margin:5%;
+  border-radius:12px;
+}
+
+
+.mainframe > * {
+  height:100%;
+  width:30%;
+  text-align:center;
+  overflow: scroll;
 }
 
 /* .feed {
@@ -108,9 +137,9 @@ li {
   .feed div.category {
     width: 50vw;
     border: 1px white solid;
-  } */ */
+  } */ 
 
-  nav {
+  /* nav {
     display: none;
   }
-}
+} */

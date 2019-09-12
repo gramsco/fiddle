@@ -6,9 +6,10 @@
     <a href="/admin/concert/add"><button>Add a concert</button></a>
 
 <hr>
+<div class="all-c   oncerts">
     {{#each concert}}
 
-    <div>
+    <div id="{{this._id}}">
         <h2>
         
         {{#if this.nom}}
@@ -20,17 +21,19 @@
         <span>(over)</span>
         {{/if}}
         </h2>
-        <div>{{this.lieu}}</div>
+        <div>{{this.day_concert}} {{this.date_concert}} {{this.month_concert}} {{this.year_concert}}</div>
+        <div>{{this.time}}</div>
         <div>{{this.adresse}}</div>
-        <div>{{this.date}}</div>
         {{#if this.price}}
         <div>{{this.price}} €</div>
         {{/if}}
+        {{!-- <LinkTo href="http://www.facebook.com" target="_blank">Test</LinkTo> --}}
        
-        <div><button><a href="/admin/concerts/{{this._id}}">Edit</a></button><button>Delete</button> </div>
+        <div><button><a href="/admin/concerts/{{this._id}}">Edit</a></button><button data-id={{this._id}} class="delete-btn">Delete</button> </div>
     </div>
     <hr>
     {{/each}}
+    </div>
 
     {{#unless concert}}
 
