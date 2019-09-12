@@ -3,23 +3,23 @@
     <header class="header">
         <h1 class="title">Fiddle</h1>
     </header>
-    <form method="post" action="/signup_chosen" id="user" class="chosen-wrap">
+    <form method="post" action="/auth/signup" id="user" class="chosen-wrap">
 
         <div class="hover-center">
-            <input type="text" id="name" name="name" placeholder="Email" class="login-circle" required>
+            <input type="text" id="name" name="username" placeholder="username" class="login-circle" required>
         </div>
         <div class="hover-center">
-            <input type="text" id="name" name="name" placeholder="Password" class="login-circle" required>
+            <input type="password" id="name" name="password" placeholder="Password" class="login-circle" required>
         </div>
         <div class="hover-center">
-            <input type="text" id="name" name="name" placeholder="city" class="login-circle" required>
+            <input type="text" id="name" name="email" placeholder="email" class="login-circle" required>
         </div>
         </div>
         <div class="hover-center">
-            <button class="login-btn"></button>
+            <button value="submit" class="login-btn"></button>
         </div>
         <div class="hover-center">
-            <a href="/signup_choice" class="button-link-choosen">Sign Up</a>
+            <a href="/auth/login" value="send" class="button-link-choosen">Login</a>
         </div>
         </p>
     </form>
