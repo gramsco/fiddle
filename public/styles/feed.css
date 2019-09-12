@@ -2,144 +2,79 @@
   box-sizing: border-box;
 }
 
-.mainframe{
-  width:84vw;
-  height:80vh;
-  margin-left:15vw;
-  display:flex;
-  justify-content: space-around;
+.mainframe {
+  width: 84vw;
+  height: 80vh;
+  margin-left: 12.5vw;
+  display: flex;
 }
 
-.feed h2{
-  background:black;
-  position:absolute;
-  top:0;
-  width:10vw;
+.feed h2 {
+  top: 0;
+  width: 10vw;
 }
 
-.card{
-  position:relative;
+.card {
+  margin: 5%;
+  border-radius: 12px;
+  text-decoration: none;
+  border: 1px solid white;
+  padding-top: 20px;
 }
 
-.card{
-  border:1px white solid;
-  margin:5%;
-  border-radius:12px;
+.artist-name {
+  font-family: "Marck Script", cursive;
 }
 
+.card-center {
+  margin: 5%;
+  border-radius: 12px;
+  text-decoration: none;
+  border: 1px solid white;
+  border-style: dashed;
+}
+
+.card-center:hover {
+  transform: scale(1.1);
+}
 
 .mainframe > * {
-  height:100%;
-  width:30%;
-  text-align:center;
+  height: 100%;
+  width: 30%;
+  text-align: center;
   overflow: scroll;
 }
 
-/* .feed {
-  display: flex;
-  margin-left: 15vw;
-  justify-content: flex-start;
-  width: 85vw;
-  height: 80vh;
-}
-
-.feed section {
-  height: 100%;
-  width: 33%;
+.class-title {
+  position: sticky;
+  background-image: url(/imgs/img-noise-361x370.png);
+  background-repeat: repeat;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+  margin-top: 0;
   color: white;
-  /* border: solid 1px white; */
-  /* overflow-y: scroll;
 }
 
-.feed section::-webkit-scrollbar {
-  width: 0 !important;
+.feedleft {
+  margin-top: 20px;
 }
 
-.feed section.container {
-  position: relative;
+.feedcenter {
+  margin-top: 20px;
 }
 
-.feed section.container article {
-  border-radius: 12px;
-  padding: 5%;
-  margin: 5%;
-  overflow: hidden;
+.feedright {
+  margin-top: 20px;
 }
 
-.feed section.container article:nth-child(odd) {
-  background: var(--bleu-moyen);
-  color: var(--gris-pale);
+.index-text {
+  font-size: 20px;
+  color: white;
 }
 
-.feed section.container article:nth-child(even) {
-  background: var(--gris-moyen);
-  color: var(--bleu-nuit);
+.index-text1 {
+  font-size: 20px;
+  color: #ff7c00;
+  font-size: 25px;
 }
-
-.feed section a {
-  background: var(--highlighter);
-}
-
-@media (max-width: 700px) { */
-  /* body {
-    height: 100%;
-    background: var(--bleu-nuit);
-    font-size: 0.8rem;
-    width: 100vw;
-  } */
-
-  /* .feed {
-    display: flex;
-    margin-left: 0;
-    flex-direction: column-reverse;
-    justify-content: flex-start;
-    height: 80vh;
-    width: 100%;
-    top: 0;
-    position: fixed;
-  }
-
-  .feed section {
-    color: white;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-    height: 33%;
-  }
-
-  .feed section.container {
-    display: flex;
-    flex-direction: row;
-    width: auto;
-    margin: 0;
-    padding: 0;
-    box-sizing: unset;
-    height: 100%;
-  }
-
-  .feed section.container article:nth-child(odd) {
-    width: 42vw;
-  }
-
-  .feed section.container article:nth-child(even) {
-    width: 60vw;
-  }
-
-  .feed section.container article {
-    border-radius: 12px;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-
-  .feed div.category {
-    width: 50vw;
-    border: 1px white solid;
-  } */ 
-
-  /* nav {
-    display: none;
-  }
-} */

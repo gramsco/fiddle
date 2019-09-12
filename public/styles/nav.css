@@ -1,0 +1,68 @@
+nav {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 20vh;
+  width: 100%;
+  align-items: flex-end;
+}
+
+.circle {
+  margin: 2%;
+  width: 70px;
+  height: 400px;
+  border-radius: 35px;
+  border: solid 1px white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--noir-bleu);
+  color: white;
+}
+
+.searching {
+  margin: 0 0 2%;
+  height: 70px;
+  width: 70px;
+  border: solid 1px;
+  border-radius: 35px;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.searching:hover {
+  width: 200px;
+}
+
+input {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  width: auto;
+}
+
+input:focus {
+  outline: none;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+}
+
+.hypertext {
+  text-decoration: none;
+}

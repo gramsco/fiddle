@@ -24,10 +24,25 @@ h4 {
   font-family: "Red Hat Display", sans-serif;
 }
 
-p,
-a {
+p {
   font-family: "Red Hat Display", sans-serif;
 }
+
+a.hypertext .critic-text {
+  text-decoration: none;
+  background: linear-gradient(to right, #ff7c00 40%, #ffbe45 60%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 20px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
 /* // sign in */
 
 .login-btn {
