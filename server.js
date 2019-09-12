@@ -89,10 +89,9 @@ app.get("/", checkloginStatus, (req, res) => {
         .find()
         .populate("concert")
         .then(critiques => {
-          console.log(critiques)
           concertModel
-            .find()
-            .then(concerts => {
+          .find() 
+          .then(concerts => {
               res.render("user/index", { artists, critiques, concerts });
             })
         })
