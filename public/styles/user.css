@@ -45,13 +45,8 @@ h2 {
 .review-container {
   border-radius: 20px;
   width: 400px;
-<<<<<<< HEAD
-  border: solid 0.5px white;
-  margin-bottom: 30px;
-=======
   border: solid 1px white;
   margin-bottom: 80px;
->>>>>>> 703ced4e2252e61f085878ab6c8e8eda190184a7
   padding-bottom: 30px;
   padding-top: 30px;
 }
