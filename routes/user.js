@@ -3,6 +3,7 @@ const router = new express.Router();
 const userModel = require("../models/user");
 const musicianModel = require("../models/musician");
 const critiqueModel = require("../models/critique")
+const concertModel = require("../models/concert")
 
 //sera à modifier avec cache quand logged in / logged out
 
@@ -16,6 +17,34 @@ router.get("/:id/edit", (req, res) => {
         .catch(err => console.log(err))
 
 })
+
+router.get("/:id/new_review", (req, res) => {
+ 
+    const id = req.params.id
+    concertModel
+        .find()
+        .then(concerts => {
+            res.render("user/new_review", {concerts,id})
+        })
+        .catch(err => console.log(err))
+})
+
+router.post("/new_review", (req, res) => {
+
+    
+    console.log(req.body)
+
+    const {concert,text,title,user} = req.body
+
+    critiqueModel
+        .create({ concert, text, title,user })
+        .then(() => {
+            console.log("critique created!")
+            res.redirect("/")
+        })
+        .catch(err => console.log(err))   
+})
+
 
 
 router.post("/:id/edit", (req, res) => {
