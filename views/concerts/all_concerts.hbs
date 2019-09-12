@@ -1,3 +1,12 @@
-{{#each concerts}}
-<div><a href="/concert/{{this._id}}">{{this.lieu}}</a>| Some Date | {{this.adresse}}</div>
-{{/each}}
+<section class="all-container">
+    <div>
+        {{#each concerts}}
+        <div class="all-wraper">
+            <div><a href="/concert/{{this._id}}" class="all-main-info">{{this.nom}}</a>
+                <p class="all-concert-element">| Some Date | </p>
+                <p class="all-concert-element">{{this.adresse}}</p>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</section>

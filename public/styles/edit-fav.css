@@ -1,0 +1,10 @@
+.edit-fav-container {
+}
+
+.fav-wraper {
+  border: 1px solid white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}

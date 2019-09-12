@@ -46,7 +46,7 @@ h2 {
   border-radius: 20px;
   width: 400px;
   border: solid 0.5px white;
-  margin-bottom: 80px;
+  margin-bottom: 30px;
   padding-bottom: 30px;
   padding-top: 30px;
 }
@@ -57,7 +57,8 @@ h2 {
   border: solid 0.5px white;
   padding-bottom: 30px;
   padding-top: 30px;
-  margin-top: 30px;
+  margin: auto;
+  margin-bottom: 80px;
 }
 
 .user-text {
@@ -66,12 +67,62 @@ h2 {
   font-size: 20px;
   margin: auto;
   align-content: center;
+  position: relative;
+  text-decoration: none;
+}
+
+.user-text2 {
+  font-family: "Red Hat Display", sans-serif;
+  color: white;
+  font-size: 20px;
+  margin: auto;
+  align-content: center;
+  position: relative;
+  text-decoration: none;
+}
+
+.user-text2:hover:after {
+  content: "";
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  bottom: 0;
+  border: 1px solid white;
 }
 
 .user-text-main {
   font-family: "Red Hat Display", sans-serif;
   color: white;
   font-size: 15px;
+  position: relative;
+  text-decoration: none;
+}
+
+.user-text-main2 {
+  font-family: "Red Hat Display", sans-serif;
+  color: #ff7c00;
+  font-size: 15px;
+  position: relative;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.user-text-main2:hover:after {
+  content: "";
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  bottom: 0;
+  border: 1px solid #ff7c00;
+}
+
+.user-text-main:hover:after {
+  content: "";
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  bottom: 0;
+  border: 1px solid white;
 }
 
 .img-user {
@@ -83,4 +134,8 @@ h2 {
 
 .edit-musician {
   text-align: center;
+}
+
+.hover-user-text:hover {
+  transform: scale(1.1);
 }

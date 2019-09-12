@@ -1,0 +1,34 @@
+.all-container {
+  margin: 40px;
+}
+
+.all-concert-element {
+  color: white;
+  font-size: 25px;
+  margin: 20px;
+}
+
+.all-main-info {
+  color: #ff7c00;
+  font-family: "Marck Script", cursive;
+  font-size: 4vw;
+  position: relative;
+  text-decoration: none;
+}
+
+.all-main-info:hover:after {
+  content: "";
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  bottom: 0;
+  border: 1px solid #ff7c00;
+}
+
+.all-wraper {
+  border: 1px solid white;
+  border-radius: 20px;
+  width: auto;
+  text-align: center;
+  margin-top: 40px;
+}

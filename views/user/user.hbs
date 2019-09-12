@@ -2,18 +2,22 @@
     {{!-- <img src="{{user.img}}" alt="Your profile picture"> --}}
     <img src="/imgs/Orange.jpg" alt="Your profile picture" class="img-user">
     <h1 class="user-title">{{user.username}}</h1>
-    <span> <a href="/user/{{user._id}}/edit" style="text-decoration: none" class="user-text-main"> Edit your
+    <span> <a href="/user/{{user._id}}/edit" id="user-text" class="user-text-main"> Edit
+            your
             profile</a></span>
 
     <div class="fav-container">
         <h2>{{user.username}}'s favs</h2>
-        <span> <a href="/user/{{user._id}}/favs" style="text-decoration: none" class="user-text"> Edit your favorite
+        <span class="text-color"> <a href="/user/{{user._id}}/favs" class="user-text2">
+                Edit your favorite
                 musicians</a></span>
 
         <div>
             {{#each musicians}}
-            <div class="edit-musician"><a href="/musician/{{this._id}}" class="user-text"
-                    style="text-decoration: none">{{this.name}}</a>
+            <div class="hover-user-text">
+                <div class="edit-musician"><a href="/musician/{{this._id}}" class="user-text"
+                        style="text-decoration: none">{{this.name}}</a>
+                </div>
             </div>
             {{/each}}
         </div>
@@ -22,10 +26,13 @@
     <div class="review-container">
         <h2>{{user.username}}'s reviews</h2>
         {{#each critiques}}
-        <div class="edit-musician"><a href="/critic/{{this._id}}" style="text-decoration: none"
-                class="user-text">{{this.title}}</a>
-            {{/each}}
+        <div class="hover-user-text">
+            <div class="edit-musician">
+                <a href="/critic/{{this._id}}" style="text-decoration: none" class="user-text">{{this.title}}</a>
+            </div>
         </div>
+        {{/each}}
+        <a href="/user/{{user._id}}/edit" id="user-text" class="user-text-main2">New review</a>
     </div>
     <div class="critics-container">
         <div class="edit-musician">

@@ -1,22 +1,23 @@
-<section class="user-edit-container">
-    <form action="/user/{{this._id}}/edit" method="post" class="user-edit-wraper">
-        <h1>Edit your profil</h1>
-        <div>
-            <label id="username"></label>
-            <input id="username" class="login-circle" type="text" name="username" value={{this.username}}>
-        </div>
-
-        <div>
-            <label id="email"></label>
+<div class="fauxbody">
+    <section class="user-edit-container">
+        <form action="/user/{{this._id}}/edit" method="post" class="user-edit-wraper">
+            <h1>Edit your profil</h1>
             <div>
-                <input id="email" class="login-circle" type="email" name="email" value={{this.email}}>
-
+                <label id="username"></label>
+                <input id="username" class="login-circle-edit" type="text" name="username" value={{this.username}}>
             </div>
 
+            <div>
+                <label id="email"></label>
+                <div>
+                    <input id="email" class="login-circle-edit" type="email" name="email" value={{this.email}}>
 
-        </div>
-        </div>
+                </div>
 
-        <button class="login-btn" value="submit"></button>
-    </form>
+
+            </div>
+            <button class="login-btn-edit" value="submit"></button>
+</div>
+</form>
 </section>
+</div>

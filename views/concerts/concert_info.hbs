@@ -1,18 +1,25 @@
-<h1><a href="/musician/{{musician._id}}">{{musician.name}}</a> @ {{concert.lieu}}</h1>
+<section class="fauxbody2">
+    <div>
+        <img src="/imgs/Orange.jpg" alt="Your profile picture" class="img-artist">
+    </div>
+    <div class="concert-info-wraper">
+        <h1><a href="/musician/{{musician._id}}" text-decoration="none" class="concert-info-text">{{concert.nom}}</a>
+        </h1>
 
-{{#if concert.passe}}
-<div>This concert took place already{{#if concert.date}}({{concert.date}}){{/if}}. Write a review?</div>
-{{/if}}
+        {{#if concert.passe}}
+        <div>This concert took place already{{#if concert.date}}({{concert.date}}){{/if}}. Write a review?</div>
+        {{/if}}
+        <div class="concert-template">
+            <div>Lundi 1 septembre 2019</div>
+            <div>14 rue du Machin 94140 – Alfortville</div>
+            <div>20:00</div>
+            <div>15 €</div>
+        </div>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<div>
-{{#each musician.instruments}}    
-#{{this}}
-{{/each}}
-</div>
+        <div>
+            {{#each musician.instruments}}
+            #{{this}}
+            {{/each}}
+        </div>
+    </div>
+</section>

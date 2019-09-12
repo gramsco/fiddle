@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+}
+
+.fauxbody2 {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.musician-title-wraper {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-musician-container {
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 30px;
+  width: 500px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 80px;
+}
+
+.user-title2 {
+  font-family: "Marck Script", cursive;
+  font-size: 60px;
+  color: #ff7c00;
+  margin: auto;
+}
+
+.user-title3 {
+  font-family: "Marck Script", cursive;
+  font-size: 40px;
+  color: #ff7c00;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.text-musician {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  margin: 20px;
+}
+
+.text-musician2 {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  margin: 20px;
+}
+
+.text-musician:hover {
+  text-decoration: underline;
+}
+
+.artist-list:hover {
+  transform: scale(1.1);
+}
+
+.artist-list {
+  font-size: 20px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.img-artist {
+  margin-top: 80px;
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  margin: auto;
+  margin-bottom: 20px;
+  margin-top: 80px;
+}
+
+.musician-instru {
+  padding-top: 10px;
+}

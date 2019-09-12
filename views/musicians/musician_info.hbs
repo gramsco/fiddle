@@ -1,16 +1,28 @@
-<h1>{{musician.name}}</h1>
-<h2>{{musician.type}}</h2>
+<div class="fauxbody2">
+    <div>
+        <img src="/imgs/Orange.jpg" alt="Your profile picture" class="img-artist">
+    </div>
+    <section class="user-musician-container">
+        <div class="musician-title-wraper">
+            <h1 class="user-title2">{{musician.name}}</h1>
+            <h2 class="user-title3">{{musician.type}}</h2>
+        </div>
 
-<div>List of all concerts by {{musician.name}} : </div>
+        <div class="text-musician2">List of all concerts by {{musician.name}} : </div>
 
-<ul>
-    {{#each concert}}
-    <li><a href="/concert/{{this._id}}">{{this.lieu}}</a></li>
-    {{/each}}
-</ul>
+        <div>
+            {{#each concert}}
+            <div class="artist-list">
+                <div><a href="/concert/{{this._id}}" class="text-musician">{{this.lieu}}</a>
+                </div>
+            </div>
+            {{/each}}
+        </div>
 
-<div>
-{{#each musician.instruments}}
-#{{this}}
-{{/each}}
+        <div class="musician-instru">
+            {{#each musician.instruments}}
+            #{{this}}
+            {{/each}}
+        </div>
+    </section>
 </div>
