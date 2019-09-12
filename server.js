@@ -72,6 +72,6 @@ app.use("/musician",musician)
 app.use("/critic",critic)
 
 
-app.listen(3000, () =>
+app.listen(process.env.PORT, () =>
   console.log("le serveur marche ici : http://localhost:3000")
 );
