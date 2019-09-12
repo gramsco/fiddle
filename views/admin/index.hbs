@@ -1,19 +1,27 @@
 {{>header_management}}
 <section>
-    <div><a href="/admin/concerts">
-            <button type="button">Concerts</button>
-        </a></div>
+    <div>
+        <a href="/admin/concerts">
+            <button type="button">{{this.nConcerts}} Concerts</button>
+        </a>
+        </div>
 
-    <div><a href="/admin/musicians">
-            <button type="button">Musicians</button>
-        </a></div>
+    <div>
+        <a href="/admin/musicians">
+            <button type="button">{{this.nMusicians}} Musicians</button>
+        </a>
+        </div>
 
-    <div><a href="/admin/users">
-            <button type="button">Users</button>
-        </a></div>
+    <div>
+        <a href="/admin/users">
+            <button type="button">{{this.nUsers}} Users</button>
+        </a>
+        </div>
 
-    <div><a href="/admin/critiques">
-            <button type="button">Critics</button>
-        </a></div>
+    <div>
+        <a href="/admin/critiques">
+            <button type="button">{{this.nCritics}} Critics</button>
+        </a>
+        </div>
 </section>
 

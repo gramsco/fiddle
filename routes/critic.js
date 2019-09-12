@@ -4,21 +4,22 @@ const critiqueModel = require("../models/critique")
 const concertModel = require("../models/concert")
 const musicianModel = require("../models/musician")
 
+
 router.get("/:id", (req, res) => {
 
     critiqueModel
         .findById(req.params.id)
-        .then(dbCritique => {
+        .then(critique => {
             concertModel
                 .findById(dbCritique.concert)
-                .then(dbConcert => {
+                .then(concert => {
                     musicianModel
                         .findById(dbConcert.musician)
-                        .then(dbMusician => {
+                        .then(musician => {
                             res.render("critics/critic", {
-                                critique: dbCritique,
-                                concert: dbConcert,
-                                musician: dbMusician
+                                critique,
+                                concert,
+                                musician
                             })
                         })
                         .catch(err => console.log(err))

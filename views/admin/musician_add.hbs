@@ -1,0 +1,37 @@
+<h1>New Artist</h1>
+
+<form action="/admin/musicians/add" method="post">
+
+    <div>
+        <label for="name">Name of the artist </label>
+        <input type="text" for="name" name="name" placeholder="name" value="{{this.name}}">
+        <span style="color:red">{{msg}}</span>
+    </div>
+    
+    <div>
+        <label for="place">Type</label>
+        <select name="type">
+            <option value="Solo Artist">Solo artist</option>
+            <option value="Duo">Duo</option>
+            <option value="Band">Band</option>
+            <option value="Choir">Choir</option>
+            <option value="Collective">Collective</option>
+            <option value="String Ensemble">String ensemble</option>
+            <option value="Orchestra">Orchestra</option>
+        </select>
+        
+    </div>
+
+    <div>
+        <label for="date">Instrument #1</label>
+        <input type="text" name="instrument" placeholder="trombone">
+    </div>
+    <div>
+        <label for="date">Instrument #2</label>
+        <input type="text" name="instrument" placeholder="xylophone">
+    </div>
+    <button style="display:none;" id="addInstrument">Add an instrument</button>
+    {{!-- add a script to add mo --}}
+
+    <button value="send">Confirm</button>
+</form>

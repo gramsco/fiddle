@@ -35,7 +35,7 @@ h2 {
 .fav-container {
   border-radius: 20px;
   width: 400px;
-  border: solid 0.5px white;
+  border: solid 1px white;
   margin-top: 30px;
   margin-bottom: 30px;
   padding-bottom: 30px;
@@ -45,7 +45,7 @@ h2 {
 .review-container {
   border-radius: 20px;
   width: 400px;
-  border: solid 0.5px white;
+  border: solid 1px white;
   margin-bottom: 80px;
   padding-bottom: 30px;
   padding-top: 30px;
@@ -54,7 +54,7 @@ h2 {
 .critics-container {
   border-radius: 20px;
   width: 400px;
-  border: solid 0.5px white;
+  border: solid 1px white;
   padding-bottom: 30px;
   padding-top: 30px;
   margin-top: 30px;

@@ -1,279 +1,47 @@
-<main>
+<main class="mainframe">
 
-    <section class="left">
-        
-        <div class="container">
+    <section class="feed left">
+        <h2>Artists</h2>
+        {{#each artists}}
+        <article class="card">
             
-            {{#each artists}}
-            <article>
-                <h2><a href="this._id"></a>{{this.name}}</a></h2>
-                {{#if this.persons}}
-                <h3>New Band</h3>
-                {{else}}
-                <h4>New Artist</h4>
-                {{/if}}
-                <p>Genre :
+            <h3>{{this.name}}</h3>
+            <p>{{this.type}}</p>
+            <p>
+                {{#each this.instruments}}
+                #{{this}}
+                {{/each}}
                 {{#each this.genre}}
                 #{{this}}
                 {{/each}}
-                </p>
-                <p>Playing since {{this.foundation_year}}</p>
-                <div>
-                    {{#each this.instruments}}
-                    <div>#{{this}}</div> 
-                    {{/each}}   
-                </div>
-            </article>
-            {{/each}}
-            <article>
-                <h2>Margonin à l'Olympia</h2>
-                <h3>08/09/2019</h3>
-                <h4>Excellent * * * * *</h4>
-                <p>Le renouveau de la K-Pop à la française. On adore !!!</p>
-                <p>La mère de l'artiste</p>
-            </article>
-            <article>
-                <h2>Margonin à l'Olympia</h2>
-                <h3>08/09/2019</h3>
-                <h4>Excellent * * * * *</h4>
-                <p>Le renouveau de la K-Pop à la française. On adore !!!</p>
-                <p>La mère de l'artiste</p>
-            </article>
-            <article>
-                <h2>Margonin à l'Olympia</h2>
-                <h3>08/09/2019</h3>
-                <h4>Excellent * * * * *</h4>
-                <p>Le renouveau de la K-Pop à la française. On adore !!!</p>
-                <p>La mère de l'artiste</p>
-            </article>
-            <article>
-                <h2>Margonin à l'Olympia</h2>
-                <h3>08/09/2019</h3>
-                <h4>Excellent * * * * *</h4>
-                <p>Le renouveau de la K-Pop à la française. On adore !!!</p>
-                <p>La mère de l'artiste</p>
-            </article>
-            <article>
-                <h2>Margonin à l'Olympia</h2>
-                <h3>08/09/2019</h3>
-                <h4>Excellent * * * * *</h4>
-                <p>Le renouveau de la K-Pop à la française. On adore !!!</p>
-                <p>La mère de l'artiste</p>
-            </article>
-            <article>
-                <h2>Margonin à l'Olympia</h2>
-                <h3>08/09/2019</h3>
-                <h4>Excellent * * * * *</h4>
-                <p>Le renouveau de la K-Pop à la française. On adore !!!</p>
-                <p>La mère de l'artiste</p>
-            </article>
-            <article>
-                <h2>Margonin à l'Olympia</h2>
-                <h3>08/09/2019</h3>
-                <h4>Excellent * * * * *</h4>
-                <p>Le renouveau de la K-Pop à la française. On adore !!!</p>
-                <p>La mère de l'artiste</p>
-            </article>
-            <article>
-                <h2>Margonin à l'Olympia</h2>
-                <h3>08/09/2019</h3>
-                <h4>Excellent * * * * *</h4>
-                <p>Le renouveau de la K-Pop à la française. On adore !!!</p>
-                <p>La mère de l'artiste</p>
-            </article>
-            <article>
-                <h2>Margonin à l'Olympia</h2>
-                <h3>08/09/2019</h3>
-                <h4>Excellent * * * * *</h4>
-                <p>Le renouveau de la K-Pop à la française. On adore !!!</p>
-                <p>La mère de l'artiste</p>
-            </article>
-            <article>
-                <h2>Margonin à l'Olympia</h2>
-                <h3>08/09/2019</h3>
-                <h4>Excellent * * * * *</h4>
-                <p>Le renouveau de la K-Pop à la française. On adore !!!</p>
-                <p>La mère de l'artiste</p>
-            </article>
-            <article>
-                <h2>Margonin à l'Olympia</h2>
-                <h3>08/09/2019</h3>
-                <h4>Excellent * * * * *</h4>
-                <p>Le renouveau de la K-Pop à la française. On adore !!!</p>
-                <p>La mère de l'artiste</p>
-            </article>
-            <article>
-                <h2>Margonin à l'Olympia</h2>
-                <h3>08/09/2019</h3>
-                <h4>Excellent * * * * *</h4>
-                <p>Le renouveau de la K-Pop à la française. On adore !!!</p>
-                <p>La mère de l'artiste</p>
-            </article>
-            <article>
-                <h2>Margonin à l'Olympia</h2>
-                <h3>08/09/2019</h3>
-                <h4>Excellent * * * * *</h4>
-                <p>Le renouveau de la K-Pop à la française. On adore !!!</p>
-                <p>La mère de l'artiste</p>
-            </article>
-            <article>
-                <h2>Margonin à l'Olympia</h2>
-                <h3>08/09/2019</h3>
-                <h4>Excellent * * * * *</h4>
-                <p>Le renouveau de la K-Pop à la française. On adore !!!</p>
-                <p>La mère de l'artiste</p>
-            </article>
-            <article>
-                <h2>Margonin à l'Olympia</h2>
-                <h3>08/09/2019</h3>
-                <h4>Excellent * * * * *</h4>
-                <p>Le renouveau de la K-Pop à la française. On adore !!!</p>
-                <p>La mère de l'artiste</p>
-            </article>
-            <article>
-                <h2>Margonin à l'Olympia</h2>
-                <h3>08/09/2019</h3>
-                <h4>Excellent * * * * *</h4>
-                <p>Le renouveau de la K-Pop à la française. On adore !!!</p>
-                <p>La mère de l'artiste</p>
-            </article>
-            <article>
-                <h2>Margonin à l'Olympia</h2>
-                <h3>08/09/2019</h3>
-                <h4>Excellent * * * * *</h4>
-                <p>Le renouveau de la K-Pop à la française. On adore !!!</p>
-                <p>La mère de l'artiste</p>
-            </article>
-        </div>
-        
-
-
+            </p>
+        </article>
+        {{/each}}
     </section>
 
-
-    <section class="center">
-        
-        <div class="container">
-            
-      
-            <article>
-                <h2>Margonin à l'Olympia</h2>
-                <h3>08/09/2019</h3>
-                <h4>Excellent * * * * *</h4>
-                <p>Le renouveau de la K-Pop à la française. On adore !!!</p>
-                <p>La mère de l'artiste</p>
-            </article>
-            <article>
-                <h2>Margonin à l'Olympia</h2>
-                <h3>08/09/2019</h3>
-                <h4>Excellent * * * * *</h4>
-                <p>Le renouveau de la K-Pop à la française. On adore !!!</p>
-                <p>La mère de l'artiste</p>
-            </article>
-            <article>
-                <h2>Margonin à l'Olympia</h2>
-                <h3>08/09/2019</h3>
-                <h4>Excellent * * * * *</h4>
-                <p>Le renouveau de la K-Pop à la française. On adore !!!</p>
-                <p>La mère de l'artiste</p>
-            </article>
-            <article>
-                <h2>Margonin à l'Olympia</h2>
-                <h3>08/09/2019</h3>
-                <h4>Excellent * * * * *</h4>
-                <p>Le renouveau de la K-Pop à la française. On adore !!!</p>
-                <p>La mère de l'artiste</p>
-            </article>
-            <article>
-                <h2>Margonin à l'Olympia</h2>
-                <h3>08/09/2019</h3>
-                <h4>Excellent * * * * *</h4>
-                <p>Le renouveau de la K-Pop à la française. On adore !!!</p>
-                <p>La mère de l'artiste</p>
-            </article>
-            <article>
-                <h2>Margonin à l'Olympia</h2>
-                <h3>08/09/2019</h3>
-                <h4>Excellent * * * * *</h4>
-                <p>Le renouveau de la K-Pop à la française. On adore !!!</p>
-                <p>La mère de l'artiste</p>
-            </article>
-            <article>
-                <h2>Margonin à l'Olympia</h2>
-                <h3>08/09/2019</h3>
-                <h4>Excellent * * * * *</h4>
-                <p>Le renouveau de la K-Pop à la française. On adore !!!</p>
-                <p>La mère de l'artiste</p>
-            </article>
-            <article>
-                <h2>Margonin à l'Olympia</h2>
-                <h3>08/09/2019</h3>
-                <h4>Excellent * * * * *</h4>
-                <p>Le renouveau de la K-Pop à la française. On adore !!!</p>
-                <p>La mère de l'artiste</p>
-            </article>
-            <article>
-                <h2>Margonin à l'Olympia</h2>
-                <h3>08/09/2019</h3>
-                <h4>Excellent * * * * *</h4>
-                <p>Le renouveau de la K-Pop à la française. On adore !!!</p>
-                <p>La mère de l'artiste</p>
-            </article>
-            <article>
-                <h2>Margonin à l'Olympia</h2>
-                <h3>08/09/2019</h3>
-                <h4>Excellent * * * * *</h4>
-                <p>Le renouveau de la K-Pop à la française. On adore !!!</p>
-                <p>La mère de l'artiste</p>
-            </article>
-            <article>
-                <h2>Margonin à l'Olympia</h2>
-                <h3>08/09/2019</h3>
-                <h4>Excellent * * * * *</h4>
-                <p>Le renouveau de la K-Pop à la française. On adore !!!</p>
-                <p>La mère de l'artiste</p>
-            </article>
-            <article>
-                <h2>Margonin à l'Olympia</h2>
-                <h3>08/09/2019</h3>
-                <h4>Excellent * * * * *</h4>
-                <p>Le renouveau de la K-Pop à la française. On adore !!!</p>
-                <p>La mère de l'artiste</p>
-            </article>
-            <article>
-                <h2>Margonin à l'Olympia</h2>
-                <h3>08/09/2019</h3>
-                <h4>Excellent * * * * *</h4>
-                <p>Le renouveau de la K-Pop à la française. On adore !!!</p>
-                <p>La mère de l'artiste</p>
-            </article>
-            <article>
-                <h2>Margonin à l'Olympia</h2>
-                <h3>08/09/2019</h3>
-                <h4>Excellent * * * * *</h4>
-                <p>Le renouveau de la K-Pop à la française. On adore !!!</p>
-                <p>La mère de l'artiste</p>
-            </article>
-            
-        </div>
+    <section class="feed center">
+        <h2>Reviews</h2>
+        {{#each critiques}}
+        {{#if this.concert}}
+        <article class="card">
+            <a href="critic/{{this.concert}}"><h3>{{this.title}}</h3></a>
+        </article>
+        {{/if}}
+        {{/each}}
     </section>
 
-    <section class="right">
-        
-        <div class="container">
-         
-            <article>
-                <h3>Titre</h3>
-                <p>Lorem ipsum dolor sit
-                    amet consectetur adipisicing elit.
-                    Error, ipsam aperiam!
-                    Veniam, totam architecto amet quos possimus,
-                    eos enim iusto ipsum iure, vitae animi temporibus
-                    dolores nisi optio quam cumque?</p>
-            </article>
-        </div>
+    <section class="feed right">
+        <h2>Concerts</h2>
+        {{#each concerts}}
+        <article class="card">
+            <div>{{this.nom}}</div>
+            <p>{{this.date_concert}} {{this.month_concert}}</p>
+            <p>{{this.price}}€</p>
+        </article>
+        {{/each}}
     </section>
+        
 
 </main>
 
-{{>nav}}
+{{!-- {{>nav}} --}}

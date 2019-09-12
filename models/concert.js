@@ -11,8 +11,12 @@ let concertSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "musician"
   },
-  time: Number,
-  price: Number
+  time: String,
+  price: Number,
+  year_concert: String,
+  month_concert: String,
+  day_concert: String,
+  date_concert:Number
 });
 
 let concertModel = mongoose.model("concert", concertSchema);
