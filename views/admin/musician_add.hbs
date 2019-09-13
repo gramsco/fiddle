@@ -1,11 +1,16 @@
 <h1>New Artist</h1>
 
-<form action="/admin/musicians/add" method="post">
+<form action="/admin/musicians/add" method="post" enctype="multipart/form-data">
 
     <div>
         <label for="name">Name of the artist </label>
         <input type="text" for="name" name="name" placeholder="name" value="{{this.name}}">
         <span style="color:red">{{msg}}</span>
+    </div>
+
+    <div>
+        <label>Profile image</label>
+        <input type="file" name="profile_image">
     </div>
     
     <div>

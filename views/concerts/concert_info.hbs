@@ -16,6 +16,10 @@
             <div>15 €</div>
         </div>
 
+        {{#if isLoggedIn}}
+        <button data-id="{{user.username}}" id="add_to_fav">Add to favs</button>
+        {{/if}}
+        <div id="very-hidden" style="visibility:hidden">Added to fav</div>
         <div>
             {{#each musician.instruments}}
             #{{this}}

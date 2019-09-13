@@ -1,6 +1,7 @@
 const express = require("express");
 const router = new express.Router();
 const userModel = require("../models/user");
+const fileUploader = require("../cloudinary");
 
 //SIGNUP
 
@@ -8,8 +9,8 @@ router.get("/signup", (req, res) => {
   res.render("auth/listener_chosen");
 });
 
-router.post("/signup", (req, res) => {
-  
+router.post("/signup", fileUploader.single("profile_image"),(req, res) => {
+ 
   userModel.findOne({ username: req.body.username })
     .then((userRes) => {
       console.log("query went fine")
@@ -19,9 +20,11 @@ router.post("/signup", (req, res) => {
         res.render("auth/login", { msg: "Sorry, this amazing username is already taken :(" })
       }
       else {
+        if (req.file) profile_image = req.file.secure_url
+        else profile_image = "/Orange.jpg"
         const { username, password, email } = req.body
         userModel
-          .create({ username, password, email })
+          .create({ profile_image, username, password, email })
           .then(() => {
             console.log("user created!")
             res.redirect("/")

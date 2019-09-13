@@ -1,13 +1,15 @@
 <main class="mainframe">
 
     <section class="feedleft">
-        <h2 class="class-title">Artists</h2>
+        <h2 class="class-title">Featured Artists</h2>
         <div class="wrap">
-            {{#each artists}}
+            {{#each musicians}}
             <article class="card">
-
+                
+                <img src="{{this.profile_image}}">
                 <h3 class="artist-name">{{this.name}}</h3>
                 <p class="index-text">{{this.type}}</p>
+                <p><a href="/musician/{{this._id}}">See more</a></p>
                 <p class="index-text1">
                     {{#each this.instruments}}
                     #{{this}}
@@ -16,26 +18,32 @@
                     #{{this}}
                     {{/each}}
                 </p>
+
             </article>
             {{/each}}
         </div>
     </section>
 
     <section class="feedcenter">
-        <h2 class="class-title">Reviews</h2>
+        <h2 class="class-title">Last Reviews</h2>
         {{#each critiques}}
-        {{#if this.concert}}
+
         <article class="card-center">
-            <a href="critic/{{this.concert}}" text-decoration="none" class="hypertext">
-                <h3 class="critic-text">{{this.title}}</h3>
+            <a href="critic/{{this._id}}" text-decoration="none" class="hypertext">
+                <h2>{{this.concert.nom}}</h2>
+               
+                    <h3 class="critic-text">"{{this.title}}"</h3>
+                    <a href="/user/{{this.user._id}}" class="get-to-user">
+                    <img class="img-user-feed" src="{{this.user.profile_image}}">
+                    <p class="tout-petit">by {{this.user.username}} </p>
+                    </a>
             </a>
         </article>
-        {{/if}}
         {{/each}}
     </section>
 
     <section class="feedright">
-        <h2 class="class-title">Concerts</h2>
+        <h2 class="class-title">Next concerts</h2>
         {{#each concerts}}
         <article class="card">
             <div class="artist-name">{{this.nom}}</div>

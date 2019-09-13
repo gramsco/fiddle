@@ -7,14 +7,15 @@ let critiqueSchema = new mongoose.Schema(
     {
         user: {
             type: mongoose.Schema.Types.ObjectId,
-            ref: "user"
+            ref: "users"
         }, // ID
         title:String,
         text: String, // Limiter le nombre de charactères
         concert: {
             type: mongoose.Schema.Types.ObjectId,
             ref: "concert"
-        }
+        },
+        temporal: Date
     }
 )
 

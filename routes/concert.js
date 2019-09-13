@@ -2,11 +2,12 @@ const express = require("express")
 const router = new express.Router();
 const concertModel = require("../models/concert")
 const musicianModel = require("../models/musician")
+const userModel = require("../models/user")
 
 router.get("/all", (req, res) => {
     
     concertModel
-        .find()
+        .find().sort({ 'date': -1 })
         .then(dbconcert => {
             musicianModel
                 .find()
@@ -23,6 +24,14 @@ router.get("/all", (req, res) => {
         .catch(err => console.log(err))
 })
 
+router.post(`/:id`, (req, res) => {
+    userModel
+        .find({ username: req.params.id })
+        .then(res.send(200))
+    .catch(err => console.log(err))
+
+})
+
 router.get("/:id", (req, res) => {
     concertModel
         .findById(req.params.id)
@@ -34,7 +43,9 @@ router.get("/:id", (req, res) => {
                     res.render("concerts/concert_info",
                         {
                             concert: dbconcert,
-                            musician: dbmusician
+                            musician: dbmusician,
+                            scripts: ["fav_concert.js"]
+
                         })
                 })
                 .catch(err => console.log(err))

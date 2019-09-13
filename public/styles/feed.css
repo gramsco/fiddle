@@ -3,15 +3,23 @@
 }
 
 .mainframe {
-  width: 84vw;
+  width: 100vw;
   height: 80vh;
-  margin-left: 12.5vw;
+  margin-left: 6.5vw;
   display: flex;
 }
 
 .feed h2 {
   top: 0;
   width: 10vw;
+}
+
+.tout-petit{
+  font-size:80%;
+}
+
+.tout-petit:hover{
+  text-decoration: underline #ff7c00;
 }
 
 .card {
@@ -45,6 +53,12 @@
   overflow: scroll;
 }
 
+.img-user-feed{
+  width:20%;
+  height:20%;
+  border-radius:50%;
+}
+
 .class-title {
   position: sticky;
   background-image: url(/imgs/img-noise-361x370.png);
@@ -54,6 +68,11 @@
   top: 0;
   margin-top: 0;
   color: white;
+}
+
+.feedleft img{
+  width:50%;
+  height:auto;
 }
 
 .feedleft {
@@ -66,6 +85,28 @@
 
 .feedright {
   margin-top: 20px;
+}
+
+@media (max-width:800px){
+  .feedleft{
+    display:none;
+  }
+  .mainframe > *{
+    width:60%;
+  }
+}
+
+@media (max-width:600px){
+  .feedleft{
+    display:none;
+  }
+
+  .feedcenter{
+    display:none;
+  }
+  .mainframe > *{
+    width:100%;
+  }
 }
 
 .index-text {

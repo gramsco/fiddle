@@ -6,15 +6,14 @@
     <a href="/admin/musicians/add"><button>Add an artist</button></a>
 
     <hr>
-
+</div>
 <div class="all-musicians">
 {{#each musicians}}
-
 <div id="{{this._id}}">
     <h2>{{this.name}}</h2>
-    <div>{{this.type}}</div>
-    <div><button><a href="/admin/musicians/{{this._id}}">Edit</a></button><button data-id={{this._id}} class="delete-btn">Delete</button></div>
+    <h3>{{this.type}}</h3>
+    <a href="/admin/musicians/{{this._id}}">Edit</a>
+    <button data-id="{{this._id}}" class="delete-btn">Delete</button>
+    <hr>
 </div>
-<hr>
 {{/each}}
-</div>

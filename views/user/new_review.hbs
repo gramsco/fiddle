@@ -3,10 +3,10 @@
 <form action="/user/new_review" method="post">
     
         <div>
-            <select>
+            <select name="concert">
             <label for="concert">Concert</label>
             {{#each concerts}}
-            <option name="concert" for="concert" value={{this._id}}>{{this.nom}}</option>
+            <option for="concert" value={{this._id}}>{{this.nom}}</option>
             {{/each}}
             </select>
         </div>

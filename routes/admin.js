@@ -4,6 +4,8 @@ const concertModel = require("../models/concert.js");
 const musicianModel = require("../models/musician");
 const critiqueModel = require("../models/critique");
 const userModel = require("../models/user");
+const fileUploader = require("../cloudinary");
+
 
 
 const months = ["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"]
@@ -73,11 +75,13 @@ router.post("/users/add", (req, res) => {
 router.get("/musicians/", (req, res) => {
   musicianModel
     .find()
-    .then(musRes => {
-      res.render("admin/musicians", {
-        musicians: musRes,
-        scripts:["musicians_admin.js"]
-      });
+    .then(musicians => {
+      setTimeout(() => {
+        res.render("admin/musicians", {
+          musicians,
+          scripts: ["musicians_admin.js"]
+        });
+      }, 500);
     })
     .catch(err => console.log(err))
 });
@@ -100,10 +104,13 @@ router.delete("/musicians/delete/:id", (req,res) => {
 
 })
 
-router.post("/musicians/add", (req, res) => {
+router.post("/musicians/add", fileUploader.single("profile_image"),(req, res) => {
 
   console.log(req.body)
-  const { name, profile_image, instruments, type } = req.body
+  const { name, instruments, type } = req.body
+  var profile_image
+  if (req.file) profile_image = req.file.secure_url
+  else profile_image = "Orange.jpg"
   musicianModel
     .find({ name: req.body.name })
     .then(exists => {
@@ -132,17 +139,22 @@ router.get("/musicians/:id", (req, res) => {
 
 
 
-router.post("/musicians/edit", (req, res) => {
+router.post("/musicians/edit", fileUploader.single("profile_image"),(req, res) => {
   console.log(req.body)
 
-  const { name, profile_image, instruments, type } = req.body
+  const { name, instruments, type } = req.body
 
+  let profile_image;
+  if (req.file) profile_image = req.file.secure_url
+  else profile_image = "imgs/Orange.jpg"
+  
   musicianModel
     .findByIdAndUpdate(req.body.id,
       {
         name,
         instruments,
-        type
+        type,
+        profile_image
       })
     .then(() => {
       console.log(`${name} was updated`)

@@ -3,8 +3,8 @@
     <header class="header">
         <h1 class="title">Fiddle</h1>
     </header>
-    <form method="post" action="/auth/signup" id="user" class="chosen-wrap">
-
+    <form method="post" action="/auth/signup" id="user" class="chosen-wrap" enctype="multipart/form-data">
+        hihi
         <div class="hover-center">
             <input type="text" id="name" name="username" placeholder="username" class="login-circle" required>
         </div>
@@ -14,10 +14,15 @@
         <div class="hover-center">
             <input type="text" id="name" name="email" placeholder="email" class="login-circle" required>
         </div>
+        
+        <label class=>Profile picture</label>
+        <input type="file" id="name" name="profile_image" placeholder="test">
+        
         </div>
         <div class="hover-center">
             <button value="submit" class="login-btn"></button>
         </div>
+
         <div class="hover-center">
             <a href="/auth/login" value="send" class="button-link-choosen"></a>
         </div>

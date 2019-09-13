@@ -1,6 +1,6 @@
 <div class="fauxbody">
     <section class="user-edit-container">
-        <form action="/user/{{this._id}}/edit" method="post" class="user-edit-wraper">
+        <form action="/user/{{this._id}}/edit" method="post" class="user-edit-wraper" enctype="multipart/form-data">
             <h1>Edit your profil</h1>
             <div>
                 <label id="username"></label>
@@ -9,12 +9,16 @@
 
             <div>
                 <label id="email"></label>
+               
                 <div>
                     <input id="email" class="login-circle-edit" type="email" name="email" value={{this.email}}>
 
                 </div>
 
+            </div>
 
+            <div>
+                <input type="file" name="profile_image">
             </div>
             <button class="login-btn-edit" value="submit"></button>
 </div>

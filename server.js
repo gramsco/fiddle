@@ -53,8 +53,8 @@ mongoose
 
 
 const musicianModel = require("./models/musician.js");
-const critiqueModel = require("./models/critique");
 const concertModel = require("./models/concert.js");
+const critiqueModel = require("./models/critique");
 const userModel = require("./models/user");
 
 
@@ -82,18 +82,22 @@ function checkPrivate(req, res, next) {
 app.use(checkloginStatus)
   
 app.get("/", checkloginStatus, (req, res) => {
-  musicianModel
-    .find()
-    .then(artists => {
+  concertModel
+    .find().sort({ 'date': -1 })
+    .populate("musician")
+    .then(concerts => {
       critiqueModel
-        .find()
-        .populate("concert")
+        .find().sort({ 'temporal': -1 })
+        .populate("concert user")
         .then(critiques => {
-          concertModel
-          .find() 
-          .then(concerts => {
-              res.render("user/index", { artists, critiques, concerts });
+          console.log(critiques)
+          musicianModel
+            .find()
+            .then(musicians => {
+              console.log("bismillah")
+              res.render("user/index", { concerts, critiques,musicians, scripts:["scroll.js"] })
             })
+          
         })
     })
 })

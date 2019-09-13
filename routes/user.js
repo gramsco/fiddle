@@ -4,6 +4,8 @@ const userModel = require("../models/user");
 const musicianModel = require("../models/musician");
 const critiqueModel = require("../models/critique")
 const concertModel = require("../models/concert")
+const fileUploader = require("../cloudinary");
+
 
 //sera à modifier avec cache quand logged in / logged out
 
@@ -36,10 +38,12 @@ router.post("/new_review", (req, res) => {
 
     const {concert,text,title,user} = req.body
 
+    let temporal = Date()
+    console.log(temporal)
     critiqueModel
-        .create({ concert, text, title,user })
-        .then(() => {
-            console.log("critique created!")
+        .create({ concert, text, title,user,temporal })
+        .then((crit) => {
+            console.log(crit)
             res.redirect("/")
         })
         .catch(err => console.log(err))   
@@ -47,13 +51,17 @@ router.post("/new_review", (req, res) => {
 
 
 
-router.post("/:id/edit", (req, res) => {
+router.post("/:id/edit", fileUploader.single("profile_image"), (req, res) => {
     
-    const { username, email } = req.body
-    console.log(username,email)
+    const { username, email} = req.body
+    console.log(username, email)
+    let profile_image;
+    if (req.file) profile_image = req.file.secure_url
+    else profile_image = "Orange.jpg"
+    
     userModel
         .findByIdAndUpdate(req.params.id,{
-            username,email
+            username,email,profile_image
         })
         .then((dbres) => {
             console.log(`${dbres.username} updated!`)
