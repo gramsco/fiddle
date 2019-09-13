@@ -33,6 +33,12 @@ router.get("/", (req, res) => {
 
 });
 
+router.get("/user/:id", (req, res) => {
+  
+  res.redirect(`/user/${req.params.id}`)
+
+})
+
 router.get("/users", (req, res) => {
   userModel
     .find()
@@ -162,6 +168,7 @@ router.post("/musicians/add", fileUploader.single("profile_image"), (req, res) =
 
   console.log(req.body)
   const { name, instruments, type } = req.body
+  var temporal = Date()
   var profile_image
 
   if (req.file) profile_image = req.file.secure_url
@@ -174,7 +181,7 @@ router.post("/musicians/add", fileUploader.single("profile_image"), (req, res) =
         res.render("admin/musician_add", { msg: "Already exists!" })
       }
       else {
-        musicianModel.create({ name, profile_image, instruments, type })
+        musicianModel.create({ name, profile_image, instruments, type,temporal })
         res.redirect("/admin/musicians")
       }
     })

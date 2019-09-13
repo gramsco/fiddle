@@ -11,10 +11,10 @@
 
 
     <div id={{this._id}} class="user-admin-wrap">
-        <div>{{this.username}}</div>
+        <div><a style="font:inherit" href="user/{{this._id}}">{{this.username}}</a></div>
         <div><img src="{{this.profile_image}}"></div>
         <div data-id="{{this._id}}" class="btn-wraper">
-            <a href="/admin/users/{{this._id}}"><div class="edit-user-btn">Edit</div></a>
+            <a href="/user/{{this._id}}"><div class="edit-user-btn">Edit</div></a>
             <div class="delete-user-btn">Delete</div>
         </div>
     </div>

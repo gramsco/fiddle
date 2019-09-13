@@ -1,0 +1,12 @@
+<section class="all-container">
+    <div>
+        {{#each allMusicians}}
+        <div class="all-wraper">
+            <div><a href="/musician/{{this._id}}" class="all-main-info">{{this.name}}</a>
+                <div><img class="img-user" src="{{this.profile_image}}"></div>
+                <p class="all-concert-element">{{this.type}} </p>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</section>

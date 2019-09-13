@@ -7,7 +7,8 @@ let musicianSchema = new mongoose.Schema({
   date_ajout: String,
   solist: Boolean,
   type: String,
-  genre: String
+  genre: String,
+  temporal:Date
 });
 
 let musicianModel = mongoose.model("musician", musicianSchema);

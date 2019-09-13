@@ -21,7 +21,7 @@ hbs.registerPartials(__dirname + "/views/partials");
 app.use(
   session({
     secret: process.env.SECRET,
-    cookie: { maxAge: 60000 }, // in millisec
+    cookie: { maxAge: 1000*60*60*24*365 }, // in millisec
     store: new MongoStore({
       mongooseConnection: mongoose.connection,
       ttl: 24 * 60 * 60 // 1 day
@@ -92,7 +92,7 @@ app.get("/", checkloginStatus, (req, res) => {
         .then(critiques => {
           console.log(critiques)
           musicianModel
-            .find()
+            .find().sort({ 'temporal': -1 })
             .then(musicians => {
               console.log("bismillah")
               res.render("user/index", { concerts, critiques,musicians, scripts:["scroll.js"] })

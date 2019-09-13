@@ -3,6 +3,17 @@ const router = new express.Router();
 const musicianModel = require("../models/musician")
 const concertModel = require("../models/concert")
 
+
+router.get("/all", (req, res) => {
+    
+    musicianModel
+        .find()
+        .then(allMusicians => {
+            res.render("musicians/all_musicians",{allMusicians})
+        })
+
+})
+
 router.get("/:id", (req, res) => {
 
     musicianModel

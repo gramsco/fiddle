@@ -3,7 +3,7 @@
         {{#each concerts}}
         <div class="all-wraper">
             <div><a href="/concert/{{this._id}}" class="all-main-info">{{this.nom}}</a>
-                <p class="all-concert-element">| Some Date | </p>
+                <p class="all-concert-element">{{this.date}}{{this.day}}{{this.month}}{{this.year}}</p>
                 <p class="all-concert-element">{{this.adresse}}</p>
             </div>
         </div>
