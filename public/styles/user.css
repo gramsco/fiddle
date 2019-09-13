@@ -9,7 +9,6 @@
   margin-top: 20px;
 }
 
-
 h2 {
   font-family: "Marck Script", cursive;
   margin-top: 20px;
@@ -139,4 +138,11 @@ h2 {
 
 .hover-user-text:hover {
   transform: scale(1.1);
+}
+
+.img-user2 {
+  margin-top: 20px;
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
 }
