@@ -5,8 +5,8 @@
         <div class="wrap">
             {{#each musicians}}
             <article class="card">
-                
-                <img src="{{this.profile_image}}">
+
+                <img src="{{this.profile_image}}" class="image-feed">
                 <h3 class="artist-name">{{this.name}}</h3>
                 <p class="index-text">{{this.type}}</p>
                 <p><a href="/musician/{{this._id}}">See more</a></p>
@@ -31,12 +31,12 @@
         <article class="card-center">
             <a href="critic/{{this._id}}" text-decoration="none" class="hypertext">
                 <h2>{{this.concert.nom}}</h2>
-               
-                    <h3 class="critic-text">"{{this.title}}"</h3>
-                    <a href="/user/{{this.user._id}}" class="get-to-user">
+
+                <h3 class="critic-text">"{{this.title}}"</h3>
+                <a href="/user/{{this.user._id}}" class="get-to-user">
                     <img class="img-user-feed" src="{{this.user.profile_image}}">
                     <p class="tout-petit">by {{this.user.username}} </p>
-                    </a>
+                </a>
             </a>
         </article>
         {{/each}}

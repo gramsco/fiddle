@@ -1,31 +1,35 @@
-<form action="/admin/concert/edit" method="post">
-   
-    <div>
-        <label for="place">Name of the location</label>
-        <input type="text" for="name" name="lieu" value="{{this.lieu}}">
-    </div>
+<section class="fauxbody">
 
-    <div>
-        <label for="date">Date</label>
-        <input type="date" value="2019-09-01" name="date" value="{{this.date}}">
-    </div>
+    <form action="/admin/concert/edit" method="post">
+        <div class="encore-une-class-wrap-concert-add">
+            <div>
+                <label for="place" class="denomination">Name of the location</label>
+                <input type="text" for="name" name="lieu" value="{{this.lieu}}" class="inputtamere">
+            </div>
 
-    <div>
-        <label for="time">Time</label>
-        <input type="time" required value="20:00" min="00:00" max="23:59" name="time">
-    </div>
+            <div>
+                <label for="date" class="denomination">Date</label>
+                <input type="date" value="2019-09-01" name="date" value="{{this.date}}" class="inputtamere">
+            </div>
 
-    <div>
-        <label for="adresse">Address</label>
-        <input type="text" name="adresse" value="{{this.adresse}}">
-    </div>
+            <div>
+                <label for="time" class="denomination">Time</label>
+                <input type="time" required value="20:00" min="00:00" max="23:59" name="time" class="inputtamere">
+            </div>
 
-    <div>
-        <label for="price">Price (in €)</label>
-        <input type="number" min="0" max="Infinity" name="price" value="{{this.price}}">
-    </div>
+            <div>
+                <label for="adresse" class="denomination">Address</label>
+                <input type="text" name="adresse" value="{{this.adresse}}" class="inputtamere">
+            </div>
 
-    <input style="display:none" type="text" name="id" value="{{this._id}}">
+            <div>
+                <label for="price" class="denomination">Price (in €)</label>
+                <input type="number" min="0" max="Infinity" name="price" value="{{this.price}}" class="inputtamere">
+            </div>
 
-    <button value="send">Confirm</button>
-</form>
+            <input style="display:none" type="text" name="id" value="{{this._id}}" class="inputtamere">
+
+            <button value="send" class="encore-un-btn-add-concert">Confirm</button>
+        </div>
+    </form>
+</section>

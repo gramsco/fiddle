@@ -1,42 +1,46 @@
-<h1>New Artist</h1>
+<section class="fauxbody">
 
-<form action="/admin/musicians/add" method="post" enctype="multipart/form-data">
 
-    <div>
-        <label for="name">Name of the artist </label>
-        <input type="text" for="name" name="name" placeholder="name" value="{{this.name}}">
-        <span style="color:red">{{msg}}</span>
-    </div>
+    <form action="/admin/musicians/add" method="post" enctype="multipart/form-data">
+        <div class="encore-une-class-wrap-concert-add">
+            <h1>New Artist</h1>
+            <div>
+                <label for="name" class="denomination">Name of the artist </label>
+                <input type="text" for="name" name="name" placeholder="name" value="{{this.name}}" class="inputtamere">
+                <span style="color:red">{{msg}}</span>
+            </div>
 
-    <div>
-        <label>Profile image</label>
-        <input type="file" name="profile_image">
-    </div>
-    
-    <div>
-        <label for="place">Type</label>
-        <select name="type">
-            <option value="Solo Artist">Solo artist</option>
-            <option value="Duo">Duo</option>
-            <option value="Band">Band</option>
-            <option value="Choir">Choir</option>
-            <option value="Collective">Collective</option>
-            <option value="String Ensemble">String ensemble</option>
-            <option value="Orchestra">Orchestra</option>
-        </select>
-        
-    </div>
+            <div>
+                <label class="denomination">Profile image</label>
+                <input type="file" name="profile_image" class="inputtamere2">
+            </div>
 
-    <div>
-        <label for="date">Instrument #1</label>
-        <input type="text" name="instrument" placeholder="trombone">
-    </div>
-    <div>
-        <label for="date">Instrument #2</label>
-        <input type="text" name="instrument" placeholder="xylophone">
-    </div>
-    <button style="display:none;" id="addInstrument">Add an instrument</button>
-    {{!-- add a script to add mo --}}
+            <div>
+                <label for="place" class="denomination">Type</label>
+                <select name="type" class="inputtamere">
+                    <option value="Solo Artist" class="denomination">Solo artist</option>
+                    <option value="Duo" class="denomination">Duo</option>
+                    <option value="Band" class="denomination">Band</option>
+                    <option value="Choir" class="denomination">Choir</option>
+                    <option value="Collective" class="denomination">Collective</option>
+                    <option value="String Ensemble" class="denomination">String ensemble</option>
+                    <option value="Orchestra" class="denomination">Orchestra</option>
+                </select>
 
-    <button value="send">Confirm</button>
-</form>
+            </div>
+
+            <div>
+                <label for="date" class="denomination">Instrument #1</label>
+                <input type="text" name="instrument" placeholder="trombone" class="inputtamere">
+            </div>
+            <div>
+                <label for="date" class="denomination">Instrument #2</label>
+                <input type="text" name="instrument" placeholder="xylophone" class="inputtamere">
+            </div>
+            <button style="display:none;" id="addInstrument">Add an instrument</button>
+            {{!-- add a script to add mo --}}
+
+            <button value="send" class="encore-un-btn-add-concert">Confirm</button>
+        </div>
+    </form>
+</section>

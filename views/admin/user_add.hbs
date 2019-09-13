@@ -1,37 +1,39 @@
-<form method="post" action="/admin/users/add">
+<section class="fauxbody">
+    <form method="post" action="/admin/users/add">
+        <div class="encore-une-class-wrap-concert-add">
+            <div>
+                <label class="denomination">Username</label>
+                <input type="text" name="username" class="inputtamere">
+            </div>
 
-    <div>
-    <label>Username</label>
-    <input type="text" name="username">
-    </div>
+            <div>
+                <label class="denomination">Email</label>
+                <input type="email" name="email" class="inputtamere">
+            </div>
 
-    <div>
-        <label>Email</label>
-        <input type="email" name="email">
-    </div>
+            <div>
+                <label class="denomination">Password</label>
+                <input type="password" name="password" class="inputtamere">
+            </div>
 
-    <div>
-        <label>Password</label>
-        <input type="password" name="password">
-    </div>
+            <div>
+                <label class="denomination">Profile image</label>
+                <input type="file" name="profile_image" class="inputtamere2">
+            </div>
 
-    <div>
-        <label>Profile image</label>
-        <input type="file" name="profile_image">
-    </div>
-
-     <div>
-         <label>Fav musicians</label>
-         <select name="fav_musicians">
-             {{#each musicians}}
-             <option value="{{this._id}}">{{this.name}}</option>
-             {{/each}}
-         </select>
-     </div>
-     <button type="submit">Send</button>
-
-
-
+            <div>
+                <label class="denomination">Fav musicians</label>
+                <select name="fav_musicians" class="inputtamere">
+                    {{#each musicians}}
+                    <option value="{{this._id}}">{{this.name}}</option>
+                    {{/each}}
+                </select>
+            </div>
+            <button type="submit" class="encore-un-btn-add-concert">Send</button>
 
 
-</form>
+
+
+        </div>
+    </form>
+</section>

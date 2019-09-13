@@ -42,6 +42,8 @@
 
 .admin-wraper {
   display: flex;
+  justify-content: center;
+  margin-top: 100px;
 }
 
 .jenesaisplusdansindexadmin {
@@ -146,4 +148,8 @@
 
 .delete-btn-admin:focus {
   outline: 0;
+}
+
+.jenesaisplusdansindexadmin:hover {
+  transform: scale(1.1);
 }

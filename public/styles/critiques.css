@@ -1,0 +1,58 @@
+.denomination3 {
+  font-family: "Marck Script", cursive;
+  font-size: 50px;
+}
+
+.encore-une-class-wrap-concert-add3 {
+  border: 1px white;
+  border-style: dashed;
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn-wrap-wrap {
+  display: flex;
+  justify-content: center;
+}
+.btn-wrap-wrap a {
+  align-self: center;
+}
+
+.edit-concert-btn-admin3 {
+  background: none;
+  border: 1px white solid;
+  border-radius: 40px;
+  height: 50px;
+  width: 10vw;
+  color: white;
+  font-size: 20px;
+
+  outline: none;
+}
+
+.delete-btn-admin3 {
+  text-decoration: none;
+  background: linear-gradient(to right, #ff7c00 40%, #ffbe45 60%);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-size: 20px;
+  height: 70px;
+  width: 100px;
+  margin-left: 20px;
+}
+
+.delete-btn-admin3:hover {
+  transform: scale(1.1);
+}
+
+.delete-btn-admin3:focus {
+  outline: 0;
+}
+
+.critiquablement-long-container-critics {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}

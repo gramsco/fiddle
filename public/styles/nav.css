@@ -1,11 +1,16 @@
 nav {
   display: flex;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  height: 20vh;
+  position: relative;
+  /* position: fixed; */
+  /* bottom: 0; */
+  /* left: 0px; */
+  /* height: 20vh; */
   width: 100%;
   align-items: flex-end;
+}
+
+.page {
+  min-height: 80vh;
 }
 
 .circle {
@@ -20,16 +25,16 @@ nav {
   align-items: center;
   background: var(--noir-bleu);
   color: white;
-  animation: anima;
-  animation-duration: 4s;
-  animation-delay: 4s;
+  /* animation: anima; */
+  /* animation-duration: 4s;
+  animation-delay: 4s; */
 }
 
-@keyframes anima {
+/* @keyframes anima {
   to {
     width: 100vw;
   }
-}
+} */
 
 .logo {
   justify-content: space-evenly;
@@ -38,10 +43,23 @@ nav {
   width: 40vw;
   display: flex;
 }
+.circle-left {
+  position: fixed;
+  bottom: 20px;
+  left: -32%;
+  transition: all 1s ease;
+  height: 20vh;
+  display: flex;
+  align-items: flex-end;
+}
+
+.circle-left:hover {
+  left: 0px;
+}
 
 .logo:hover {
   animation: anima forwards;
-  animation-duration: 4s;
+  animation-duration: 2s;
 }
 
 /* .searching {

@@ -1,51 +1,54 @@
-<form action="/admin/concert/add" method="post">
+<section class="fauxbody">
+    <form action="/admin/concert/add" method="post">
+        <div class="encore-une-class-wrap-concert-add">
+            <div>
+                <label for="place" class="denomination">Name of the location</label>
+                <input required type="text" for="name" name="lieu" class="inputtamere">
+            </div>
 
-    <div>
-        <label for="place">Name of the location</label>
-        <input required type="text" for="name" name="lieu">
-    </div>
+            <div>
+                <label for="date" class="denomination">Date</label>
+                <input required type="date" value="2019-09-01" name="date" class="inputtamere">
+            </div>
 
-    <div>
-        <label for="date">Date</label>
-        <input required type="date" value="2019-09-01" name="date">
-    </div>
+            <div>
+                <label for="time" class="denomination">Time</label>
+                <input type="time" required value="20:00" min="00:00" max="23:59" name="time" class="inputtamere">
+            </div>
 
-    <div>
-        <label for="time">Time</label>
-        <input type="time" required value="20:00" min="00:00" max="23:59" name="time">
-    </div>
-
-    <div>
-        <label for="musician">Musician</label>
-        {{#if musicians}}
-        <select name="musician" id="pet-select">
-            <option value="">--Please choose an option--</option>
-            {{#each musicians}}
-            <option name="musician" value="{{this._id}}">{{this.name}}</option>
-            {{/each}}
-        </select>
-        {{/if}}
-    </div>
-
-  
-
-   
-
-    <div>
-        <label for="adresse">Address</label>
-        <input required type="text" name="adresse">
-    </div>
+            <div>
+                <label for="musician" class="denomination">Musician</label>
+                {{#if musicians}}
+                <select name="musician" id="pet-select" class="inputtamere">
+                    <option value="" class="denomination">--Please choose an option--</option>
+                    {{#each musicians}}
+                    <option name="musician" value="{{this._id}}" class="inputtamere">{{this.name}}</option>
+                    {{/each}}
+                </select>
+                {{/if}}
+            </div>
 
 
 
 
 
-    <div>
-        <label for="price">Price (in €)</label>
-        <input required type="number" min="0" max="Infinity" name="price">
-    </div>
+            <div>
+                <label for="adresse" class="denomination">Address</label>
+                <input required type="text" name="adresse" class="inputtamere">
+            </div>
 
-    <input style="display:none" type="text" name="id">
 
-    <button value="send">Confirm</button>
-</form>
+
+
+
+            <div>
+                <label for="price" class="denomination">Price (in €)</label>
+                <input required type="number" min="0" max="Infinity" name="price" class="inputtamere">
+            </div>
+
+            <input style="display:none" type="text" name="id" class="inputtamere">
+
+            <button value="send" class="encore-un-btn-add-concert">Confirm</button>
+        </div>
+    </form>
+</section>
