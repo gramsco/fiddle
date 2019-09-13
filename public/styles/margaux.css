@@ -280,3 +280,22 @@ input:focus {
   -ms-transition: opacity 0.35s ease-in-out;
   transition: opacity 0.35s ease-in-out;
 }
+
+.image-login-place {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  margin-top: 10px;
+}
+
+.inputtamere6 {
+  background: none;
+  border: 1px solid white;
+  border-radius: 20px;
+  width: 75px;
+  height: 15px;
+  margin-left: 60px;
+  margin-top: 10px;
+}
