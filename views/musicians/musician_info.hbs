@@ -11,6 +11,9 @@
         <div class="text-musician2">List of all concerts by {{musician.name}} : </div>
 
         <div>
+            {{#unless concert}}
+            <div>This artist has no concerts (yet)</div>
+            {{/unless}}
             {{#each concert}}
             <div class="artist-list">
                 <div><a href="/concert/{{this._id}}" class="text-musician">{{this.lieu}}</a>
@@ -20,6 +23,7 @@
         </div>
 
         <div class="musician-instru">
+            <br>
             {{#each musician.instruments}}
             #{{this}}
             {{/each}}
