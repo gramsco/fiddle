@@ -3,12 +3,13 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin-top: 100px;
 }
 
-.admin-mini-nav-board-trop-cool{
-  position:fixed;
-  left:0;
-  top:0;
+.admin-mini-nav-board-trop-cool {
+  position: fixed;
+  left: 0;
+  top: 0;
 }
 
 .manage1 {

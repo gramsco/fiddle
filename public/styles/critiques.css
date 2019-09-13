@@ -56,3 +56,15 @@
   margin-top: 100px;
   margin-bottom: 100px;
 }
+
+.delete-btn-admin-ah {
+  text-decoration: none;
+  background: linear-gradient(to right, #ff7c00 40%, #ffbe45 60%);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-size: 20px;
+  height: 70px;
+  width: 200px;
+  margin-left: 20px;
+}
