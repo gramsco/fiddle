@@ -1,19 +1,21 @@
- {{>header_management}}
+{{>header_management}}
+<section class="general-admin-concert-container">
+    <div class="all-concerts">
+        <h3 class="management-title">Artists Management</h3>
 
-<div>
-    <h3>Artists Management</h3>
+        <a href="/admin/musicians/add" class="add-concert-btn">Add an artiste</a>
+    </div>
 
-    <a href="/admin/musicians/add"><button>Add an artist</button></a>
 
-    <hr>
-</div>
-<div class="all-musicians">
-{{#each musicians}}
-<div id="{{this._id}}">
-    <h2>{{this.name}}</h2>
-    <h3>{{this.type}}</h3>
-    <a href="/admin/musicians/{{this._id}}">Edit</a>
-    <button data-id="{{this._id}}" class="delete-btn">Delete</button>
-    <hr>
-</div>
-{{/each}}
+    <div class="all-musicians">
+        {{#each musicians}}
+
+        <div id="{{this._id}}" class="all-concerts">
+            <h2>{{this.name}}</h2>
+            <div class="text-info-admin-concert2">{{this.type}}</div>
+            <div><a href="/admin/musicians/{{this._id}}" class="edit-concert-btn-admin">Edit</a><button
+                    data-id={{this._id}} class="delete-btn-admin">Delete</button></div>
+        </div>
+        {{/each}}
+    </div>
+</section>

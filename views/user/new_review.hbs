@@ -1,27 +1,31 @@
-<h1>New Review</h1>
+<section class="fauxbody">
+    <div class="new-review-container">
+        <h1 class="title-review">New Review</h1>
 
-<form action="/user/new_review" method="post">
-    
-        <div>
-            <select name="concert">
-            <label for="concert">Concert</label>
-            {{#each concerts}}
-            <option for="concert" value={{this._id}}>{{this.nom}}</option>
-            {{/each}}
+        <form action="/user/new_review" method="post">
+
+            <div>
+                <select class="review-label" name="concert">
+                    <label for="concert">Concert</label>
+                    {{#each concerts}}
+                    <option name="concert" for="concert" value={{this._id}}>{{this.nom}}</option>
+                    {{/each}}
+                </select>
+            </div>
+
+            <div>
+                <label for="title" class="review-text">Short Title</label>
+                <input class="login-text" type="text" for="title" name="title">
+            </div>
+
+            <div>
+                <label for="fulltext" class="review-text">Full text</label>
+                <textarea for="fulltext" class="login-circle3" name="text"></textarea>
+            </div>
+
+            <input style="display:none" value="{{id}}" name="user">
+            <button value="submit" class="login-btn-review"></button>
             </select>
-        </div>
-
-        <div>
-            <label for="title">Short Title</label>
-            <input style="display:block;background:white;color:black" type="text" for="title" name="title">
-        </div>
-
-        <div>
-            <label for="fulltext">Full text</label>
-            <textarea for="fulltext" style="overflow:auto;resize:none" name="text"></textarea>
-        </div>
-
-        <input style="display:none" value="{{id}}" name="user">
-        <button value="submit">Submit</button>
-    </select>
-</form>
+        </form>
+    </div>
+</section>
