@@ -46,9 +46,11 @@
         <h2 class="class-title">Next concerts</h2>
         {{#each concerts}}
         <article class="card">
+           
             <div class="artist-name">{{this.nom}}</div>
             <p class="index-text">{{this.date_concert}} {{this.month_concert}}</p>
             <p class="index-text">{{this.price}}€</p>
+            <a href="/concert/{{this._id}}">See infos</a>
         </article>
         {{/each}}
     </section>
