@@ -1,25 +1,27 @@
-<form method="post" action="/admin/users/edit" enctype="multipart/form-data">
+<section class="fauxbody">
+    <form method="post" action="/admin/users/edit" enctype="multipart/form-data">
+        <div class="encore-une-class-wrap-concert-add">
 
-    <div>
-        <label>Username</label>
-        <input type="text" name="username" value="{{this.username}}" >
-    </div>
+            <div>
+                <label class="denomination">Username</label>
+                <input type="text" name="username" value="{{this.username}}" class="inputtamere">
+            </div>
 
-    <div>
-        <label>Email</label>
-        <input type="email" name="email" value="{{this.email}}">
-    </div>
+            <div>
+                <label class="denomination">Email</label>
+                <input type="email" name="email" value="{{this.email}}" class="inputtamere">
+            </div>
 
-    <div>
-        <label>Password</label>
-        <input type="password" name="password" value="{{this.password}}">
-    </div>
+            <div>
+                <label class="denomination">Password</label>
+                <input type="password" name="password" value="{{this.password}}" class="inputtamere">
+            </div>
 
-    <div>
-        <label>New image</label>
-        <input type="file" name="profile_image">
-    </div>
-{{!--     
+            <div>
+                <label class="denomination">New image</label>
+                <input type="file" name="profile_image" class="inputtamere2">
+            </div>
+            {{!--     
     <div>
         <label>Fav musicians</label>
         <select name="fav_musicians">
@@ -29,11 +31,12 @@
         </select>
     </div> --}}
 
-    <input style="display:none" name="id" value="{{this._id}}">
-    <button type="submit">Send</button>
+            <input style="display:none" name="id" value="{{this._id}}">
+            <button type="submit" class="encore-un-btn-add-concert">Send</button>
 
 
 
 
-
-</form>
+        </div>
+    </form>
+</section>
