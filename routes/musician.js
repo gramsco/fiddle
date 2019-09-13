@@ -7,7 +7,7 @@ const concertModel = require("../models/concert")
 router.get("/all", (req, res) => {
     
     musicianModel
-        .find()
+        .find().sort({ 'temporal': -1 })
         .then(allMusicians => {
             res.render("musicians/all_musicians",{allMusicians})
         })
