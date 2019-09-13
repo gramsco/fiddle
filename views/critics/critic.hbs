@@ -1,9 +1,13 @@
 <section class="fauxbody">
     <div class="critic-indiv-container">
-        <h1>{{musician.name}} Aria stark @ Honolulu {{concert.lieu}}</h1>
+        {{#if critique.concert.nom}}
+        <h1>{{critique.concert.nom}}</h1>
         <div>
-            <a href="/concert/{{concert._id}}">See the concert infos</a>
+            <a href="/concert/{{critique.concert._id}}">See the concert infos</a>
         </div>
+        {{else}}
+        <div>The concert this critique refers to was erased :( Contact @Margaux</div>
+        {{/if}}
         <h2>{{critique.title}}</h2>
         <p class="critique-text-user">{{critique.text}}</p>
     </div>

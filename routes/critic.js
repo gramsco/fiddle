@@ -11,8 +11,10 @@ router.get("/:id", (req, res) => {
 
     critiqueModel
         .findById(req.params.id)
+        .populate("concert")
         .then(critique => {
-            
+            console.log("wtf")
+            console.log(critique)
             res.render("critics/critic", { critique })
         })
                             
