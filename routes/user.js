@@ -9,6 +9,8 @@ const fileUploader = require("../cloudinary");
 
 //sera à modifier avec cache quand logged in / logged out
 
+
+
 router.get("/:id/edit", (req, res) => {
 
     userModel
@@ -98,6 +100,20 @@ router.get("/:id/favs", (req, res) => {
         })
         .catch(err => console.log(err))
 
+})
+
+router.get("/profile/:name", (req, res) => {
+    
+    userModel
+        .findOne({ username: req.params.name })
+        .then(userFound => {
+            console.log("------")
+            console.log(userFound._id)
+            console.log("------")
+
+            res.redirect(`/user/${userFound._id}`)
+        })
+        .catch(err => console.log(err))
 })
 
 

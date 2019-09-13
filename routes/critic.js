@@ -7,6 +7,7 @@ const musicianModel = require("../models/musician")
 
 
 
+
 router.get("/:id", (req, res) => {
 
     critiqueModel

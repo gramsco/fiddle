@@ -3,9 +3,12 @@
         <div class="logo">
             <a href="/musician/all"> <i class="fas fa-guitar"></i></a>
             <a href="/concert/all"><i id="music" class="fas fa-music"></i></a>
-            <a href="/admin"><i class="fas fa-lock-open"></i></a>
-            <a href="/auth/login"> <i class="far fa-user-circle"></i></a>
+            <a href="/auth/login"><i class="fas fa-lock-open"></i></a>
+            {{#if isLoggedIn}}
+            <a href="/user/profile/{{user.username}}"> <i class="far fa-user-circle"></i></a>
+            {{else}}
             <a href="/auth/signup"><i class="fas fa-plus"></i></a>
+            {{/if}}
             <a href="/"><i class="fas fa-home"></i></a>
             <a href="/"> <i class="far fa-circle"></i></a>
 
