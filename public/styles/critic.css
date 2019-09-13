@@ -1,0 +1,16 @@
+.critic-indiv-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: white 1px;
+  border-style: dashed;
+  border-radius: 20px;
+  width: 50vh;
+  text-align: center;
+  padding: 20px;
+}
+
+.critique-text-user {
+  color: white;
+  font-size: 25px;
+}

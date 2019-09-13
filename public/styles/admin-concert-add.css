@@ -1,0 +1,48 @@
+.encore-une-class-wrap-concert-add {
+  border: 1px white;
+  border-style: dashed;
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.encore-un-btn-add-concert {
+  background: none;
+  border: 1px white solid;
+  border-radius: 40px;
+  height: 50px;
+  width: 20vw;
+  color: white;
+  font-size: 20px;
+  margin-top: 50px;
+}
+
+.denomination {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 25px;
+  color: white;
+}
+
+.inputtamere {
+  width: 300px;
+  height: 70px;
+  border-radius: 70px;
+  border: none;
+  display: flex;
+  background-color: #ff7c00;
+  background-image: -webkit-linear-gradient(20deg, #ff7c00 40%, #ffbe45 60%);
+  color: white;
+  font-size: 20px;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+  outline: none;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+.inputtamere:focus {
+  width: 300px;
+}

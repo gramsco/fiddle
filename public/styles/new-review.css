@@ -65,6 +65,10 @@
   font-family: "Red Hat Display", sans-serif;
 }
 
+.login-text:focus {
+  width: 300px;
+}
+
 .login-btn-review {
   width: 70px;
   height: 70px;

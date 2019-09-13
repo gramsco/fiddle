@@ -1,10 +1,10 @@
-<section class="critic-main-container">
-    <div>
-        <h1>{{musician.name}} @ {{concert.lieu}}</h1>
+<section class="fauxbody">
+    <div class="critic-indiv-container">
+        <h1>{{musician.name}} Aria stark @ Honolulu {{concert.lieu}}</h1>
         <div>
             <a href="/concert/{{concert._id}}">See the concert infos</a>
         </div>
         <h2>{{critique.title}}</h2>
-        <p>{{critique.text}}</p>
+        <p class="critique-text-user">{{critique.text}}</p>
     </div>
 </section>

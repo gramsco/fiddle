@@ -1,14 +1,24 @@
 {{>header_management}}
 
-{{#unless critics}}
-<div>Nothing to manage, here</div>
-{{/unless}}
+<section class="fauxbody">
+    <div class="critiquablement-long-container-critics">
+        {{#unless critics}}
+        <div class="denomination3">Nothing to manage, here</div>
+        {{/unless}}
 
-<div class="all-critics">
-    {{#each critics}}
-    <div data-id={{this._id}}>
-        "{{this.title}}" – {{this.username}} <button class="see-btn">see critic</button> <button
-            class="delete-btn">delete</button>
+        <div class=" all-critics">
+            {{#each critics}}
+            <div class="encore-une-class-wrap-concert-add3">
+                <div data-id={{this._id}} class="denomination3">
+
+                    <p class="denomination3">"{{this.title}}" – {{this.username}} </p>
+                    <div class="btn-wrap-wrap">
+                        <a href="/critic/{{this._id}}"><button class="edit-concert-btn-admin3">see critic</button></a>
+                        <button class="delete-btn-admin3">delete</button>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
     </div>
-    {{/each}}
-</div>
+</section>
