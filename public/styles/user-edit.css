@@ -98,6 +98,7 @@
   color: white;
   height: 70px;
   width: 100px;
+  cursor:pointer;
 }
 
 .delete-user-btn {
@@ -112,7 +113,9 @@
   height: 70px;
   width: 100px;
   padding-top: 20px;
+  cursor:pointer;
 }
+
 
 .delete-user-btn:hover {
   transform: scale(1.1);

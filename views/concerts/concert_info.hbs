@@ -1,6 +1,6 @@
 <section class="fauxbody2">
     <div>
-        <img src="/imgs/Orange.jpg" alt="Your profile picture" class="img-artist">
+        <img src="{{musician.profile_image}}" alt="Your profile picture" class="img-artist">
     </div>
     <div class="concert-info-wraper">
         <h1><a href="/musician/{{musician._id}}" text-decoration="none" class="concert-info-text">{{concert.nom}}</a>
@@ -9,6 +9,7 @@
         {{#if concert.passe}}
         <div>This concert took place already{{#if concert.date}}({{concert.date}}){{/if}}. Write a review?</div>
         {{/if}}
+
         <div class="concert-template">
             <div>Lundi 1 septembre 2019</div>
             <div>14 rue du Machin 94140 – Alfortville</div>

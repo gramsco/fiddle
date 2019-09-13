@@ -1,0 +1,39 @@
+<form method="post" action="/admin/users/edit" enctype="multipart/form-data">
+
+    <div>
+        <label>Username</label>
+        <input type="text" name="username" value="{{this.username}}" >
+    </div>
+
+    <div>
+        <label>Email</label>
+        <input type="email" name="email" value="{{this.email}}">
+    </div>
+
+    <div>
+        <label>Password</label>
+        <input type="password" name="password" value="{{this.password}}">
+    </div>
+
+    <div>
+        <label>New image</label>
+        <input type="file" name="profile_image">
+    </div>
+{{!--     
+    <div>
+        <label>Fav musicians</label>
+        <select name="fav_musicians">
+            {{#each musicians}}
+            <option value="{{this._id}}">{{this.name}}</option>
+            {{/each}}
+        </select>
+    </div> --}}
+
+    <input style="display:none" name="id" value="{{this._id}}">
+    <button type="submit">Send</button>
+
+
+
+
+
+</form>

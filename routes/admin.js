@@ -8,8 +8,8 @@ const fileUploader = require("../cloudinary");
 
 
 
-const months = ["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"]
-const days = ["Lundi","Mardi","Mercredi","Jeudi","Vendredi"]
+const months = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"]
+const days = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi"]
 
 
 router.get("/", (req, res) => {
@@ -25,19 +25,23 @@ router.get("/", (req, res) => {
               userModel
                 .count()
                 .then(nUsers => {
-                  res.render("admin/index", {nMusicians,nConcerts,nCritiques,nUsers});
-              })
-          })
-      })
-  })
-  
+                  res.render("admin/index", { nMusicians, nConcerts, nCritiques, nUsers });
+                })
+            })
+        })
+    })
+
 });
 
 router.get("/users", (req, res) => {
   userModel
     .find()
     .then(allUsers => {
-      res.render("admin/users", { allUsers });
+      res.render("admin/users",
+        {
+          allUsers,
+          scripts: ["users_admin.js"]
+        });
     })
     .catch(err => console.log(err))
 });
@@ -46,27 +50,74 @@ router.get("/users/add", (req, res) => {
   musicianModel
     .find()
     .then(musicians => {
-      res.render("admin/user_add",{musicians})
+      res.render("admin/user_add", { musicians })
     })
     .catch(err => console.log(err))
 })
 
 router.post("/users/add", (req, res) => {
-  
+
   const { username, email, fav_musicians, profile_image, password } = req.body
-  
+
   userModel
     .create({
-    username,
-    email,
-    fav_musicians,
-    profile_image,
-    password
+      username,
+      email,
+      fav_musicians,
+      profile_image,
+      password
     })
     .then(us => {
-      
+
       console.log(`username ${us._id} created!`)
       res.redirect("/admin/users")
+    })
+    .catch(err => console.log(err))
+
+})
+
+router.get("/users/:id", (req, res) => {
+
+  userModel
+    .findById(req.params.id)
+    .then((userFound) => {
+      console.log(`user found: ${userFound.username} !`)
+      res.render("admin/user_edit",userFound)
+  })
+  
+
+})
+
+router.post("/users/edit", fileUploader.single("profile_image"), (req, res) => {
+  
+  console.log(req.body)
+  const { username, email, password, fav_musicians, id } = req.body
+  let profile_image;
+  console.log("------ file ???? -----")
+  console.log(req.file)
+  console.log("------ file ???? -----")
+
+  if (req.file) profile_image = req.file.secure_url
+  else profile_image = "https://res.cloudinary.com/dpzptfblv/image/upload/v1568368454/fiddl/Orange_gpbh1x.jpg"
+  userModel
+    .findByIdAndUpdate(id, { username, email, password, fav_musicians, profile_image })
+    .then((userFound) => {
+      console.log("user updated" + userFound.username)
+      res.redirect("/admin/users")
+    })
+    .catch(err => console.log(err))
+})
+
+
+
+
+router.delete("/users/delete/:id", (req, res) => {
+
+  userModel
+    .findByIdAndDelete(req.params.id)
+    .then(() => {
+      console.log("user erased :( hope he deserved it")
+      res.send(200)
     })
     .catch(err => console.log(err))
 
@@ -87,43 +138,47 @@ router.get("/musicians/", (req, res) => {
 });
 
 router.get("/musicians/add", (req, res) => {
-  
+
   res.render("admin/musician_add")
-   
+
 })
 
-router.delete("/musicians/delete/:id", (req,res) => {
-  
+
+
+
+router.delete("/musicians/delete/:id", (req, res) => {
+
   musicianModel
     .findByIdAndDelete(req.params.id)
     .then(() => {
       console.log("musician erased :( what a sad thing to do")
       res.send(200)
     })
-  .catch(err => console.log(err))
+    .catch(err => console.log(err))
 
 })
 
-router.post("/musicians/add", fileUploader.single("profile_image"),(req, res) => {
+router.post("/musicians/add", fileUploader.single("profile_image"), (req, res) => {
 
   console.log(req.body)
   const { name, instruments, type } = req.body
   var profile_image
+
   if (req.file) profile_image = req.file.secure_url
-  else profile_image = "Orange.jpg"
+  else profile_image = "https://res.cloudinary.com/dpzptfblv/image/upload/v1568368454/fiddl/Orange_gpbh1x.jpg"
   musicianModel
     .find({ name: req.body.name })
     .then(exists => {
       //checks if name appears to already exist in database
       if (exists.name) {
-        res.render("admin/musician_add",{msg:"Already exists!"})
+        res.render("admin/musician_add", { msg: "Already exists!" })
       }
       else {
         musicianModel.create({ name, profile_image, instruments, type })
         res.redirect("/admin/musicians")
       }
-  })
-  
+    })
+
 
 })
 
@@ -139,15 +194,15 @@ router.get("/musicians/:id", (req, res) => {
 
 
 
-router.post("/musicians/edit", fileUploader.single("profile_image"),(req, res) => {
+router.post("/musicians/edit", fileUploader.single("profile_image"), (req, res) => {
   console.log(req.body)
 
   const { name, instruments, type } = req.body
 
   let profile_image;
   if (req.file) profile_image = req.file.secure_url
-  else profile_image = "imgs/Orange.jpg"
-  
+  else profile_image = "https://res.cloudinary.com/dpzptfblv/image/upload/v1568368454/fiddl/Orange_gpbh1x.jpg"
+
   musicianModel
     .findByIdAndUpdate(req.body.id,
       {
@@ -173,7 +228,7 @@ router.get("/concerts", (req, res) => {
       res.render("admin/concerts",
         {
           concert: dbRes,
-          scripts:["concerts_admin.js"]
+          scripts: ["concerts_admin.js"]
         });
     })
     .catch(err => console.log("ça ne marche pas"));
@@ -201,7 +256,7 @@ router.get("/concert/add", (req, res) => {
 
 router.post("/concert/add", (req, res) => {
 
-  var { date, lieu, adresse, price, musician,time } = req.body
+  var { date, lieu, adresse, price, musician, time } = req.body
   date = new Date(date)
   const year_concert = date.getFullYear()
   const month_concert = months[date.getMonth()]
@@ -213,7 +268,7 @@ router.post("/concert/add", (req, res) => {
     .then(musician => {
       nom = `${musician.name} @ ${lieu}`
       concertModel
-        .create({ nom, date, date_concert, year_concert, month_concert, day_concert,lieu, adresse, price, musician, time})
+        .create({ nom, date, date_concert, year_concert, month_concert, day_concert, lieu, adresse, price, musician, time })
         .then((dbRes) => {
           console.log("new concert !" + dbRes)
           res.redirect("/admin/concerts")
@@ -224,7 +279,7 @@ router.post("/concert/add", (req, res) => {
 })
 
 router.delete("/concert/delete/:id", (req, res) => {
-  
+
   concertModel
     .findByIdAndDelete(req.params.id)
     .then((idFound) => {
@@ -232,7 +287,7 @@ router.delete("/concert/delete/:id", (req, res) => {
       res.send(200)
     })
     .catch(err => console.log(err))
-  
+
 })
 
 
@@ -260,7 +315,7 @@ router.get("/critiques", (req, res) => {
         console.log("no critics")
         res.render("admin/critiques")
       }
-      critics.forEach((element,index) => {
+      critics.forEach((element, index) => {
         userModel
           .findOne(element.user)
           .then((userRes) => {
@@ -269,8 +324,8 @@ router.get("/critiques", (req, res) => {
               setTimeout(() => {
                 res.render("admin/critiques",
                   {
-                  critics,
-                  scripts: ["critic_admin.js"]
+                    critics,
+                    scripts: ["critic_admin.js"]
                   }
                 )
               }, 50);
@@ -288,9 +343,9 @@ router.delete("/critiques/:id", (req, res) => {
       res.send(200)
     })
     .catch(err => console.log(err))
-  
-  
-    
+
+
+
 
 })
 

@@ -5,6 +5,12 @@
   text-align: center;
 }
 
+.admin-mini-nav-board-trop-cool{
+  position:fixed;
+  left:0;
+  top:0;
+}
+
 .manage1 {
   color: white;
   font-family: "Marck Script", cursive;

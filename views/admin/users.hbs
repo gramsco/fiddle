@@ -2,16 +2,19 @@
     {{>header_management}}
     <div class="all-concerts">
         <h3 class="management-title">Users Management</h3>
-
         <a href="/admin/users/add" class="add-concert-btn">Add a user</a>
     </div>
 
     {{#each allUsers}}
 
+
+
+
     <div id={{this._id}} class="user-admin-wrap">
         <div>{{this.username}}</div>
-        <div class="btn-wraper">
-            <div class="edit-user-btn">Edit</div>
+        <div><img src="{{this.profile_image}}"></div>
+        <div data-id="{{this._id}}" class="btn-wraper">
+            <a href="/admin/users/{{this._id}}"><div class="edit-user-btn">Edit</div></a>
             <div class="delete-user-btn">Delete</div>
         </div>
     </div>
