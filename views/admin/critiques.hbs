@@ -5,11 +5,10 @@
 {{/unless}}
 
 <div class="all-critics">
-{{#each critics}}
-<div data-id={{this._id}}>
-    "{{this.title}}" – {{this.username}} <button class="see-btn" >see critic</button> <button class="delete-btn">delete</button>
+    {{#each critics}}
+    <div data-id={{this._id}}>
+        "{{this.title}}" – {{this.username}} <button class="see-btn">see critic</button> <button
+            class="delete-btn">delete</button>
+    </div>
+    {{/each}}
 </div>
-<hr>
-{{/each}}
-</div>
-

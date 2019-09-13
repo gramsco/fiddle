@@ -1,38 +1,41 @@
 {{>header_management}}
 
-<div>
-    <h3>Concerts Management</h3>
+<div class="general-admin-concert-container">
+    <div class="management-container">
+        <h3 class="management-title">Concerts Management</h3>
 
-    <a href="/admin/concert/add"><button>Add a concert</button></a>
-
-<hr>
-<div class="all-c   oncerts">
-    {{#each concert}}
-
-    <div id="{{this._id}}">
-        <h2>
-        
-        {{#if this.nom}}
-        {{this.nom}}
-        {{else}}
-        Untitled
-        {{/if}}
-        {{#if this.passe}}
-        <span>(over)</span>
-        {{/if}}
-        </h2>
-        <div>{{this.day_concert}} {{this.date_concert}} {{this.month_concert}} {{this.year_concert}}</div>
-        <div>{{this.time}}</div>
-        <div>{{this.adresse}}</div>
-        {{#if this.price}}
-        <div>{{this.price}} €</div>
-        {{/if}}
-        {{!-- <LinkTo href="http://www.facebook.com" target="_blank">Test</LinkTo> --}}
-       
-        <div><button><a href="/admin/concerts/{{this._id}}">Edit</a></button><button data-id={{this._id}} class="delete-btn">Delete</button> </div>
+        <a href="/admin/concert/add" class="add-concert-btn">Add a concert</a>
     </div>
-    <hr>
-    {{/each}}
+
+    <div>
+        {{#each concert}}
+
+        <div id="{{this._id}}" class="all-concerts">
+            <h2>
+                <div>
+                    {{#if this.nom}}
+                    {{this.nom}}
+                    {{else}}
+                    Untitled
+                    {{/if}}
+                    {{#if this.passe}}
+                    <span>(over)</span>
+                    {{/if}}
+            </h2>
+            <div class="text-info-admin-concert">{{this.day_concert}} {{this.date_concert}} {{this.month_concert}}
+                {{this.year_concert}}</div>
+            <div class="text-info-admin-concert">{{this.time}}</div>
+            <div class="text-info-admin-concert2">{{this.adresse}}</div>
+            {{#if this.price}}
+            <div class="text-info-admin-concert2">{{this.price}} €</div>
+
+            {{/if}}
+            {{!-- <LinkTo href="http://www.facebook.com" target="_blank">Test</LinkTo> --}}
+
+            <div><a class="edit-concert-btn-admin" href="/admin/concerts/{{this._id}}">Edit</a><button
+                    data-id={{this._id}} class="delete-btn-admin">Delete</button> </div>
+        </div>
+        {{/each}}
     </div>
 
     {{#unless concert}}

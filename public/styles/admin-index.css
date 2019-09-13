@@ -1,0 +1,149 @@
+/* header management */
+.manage-place {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.manage1 {
+  color: white;
+  font-family: "Marck Script", cursive;
+  font-size: 50px;
+  position: relative;
+  text-decoration: none;
+}
+
+.manage1:hover:after {
+  content: "";
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  bottom: 0;
+  border: 1px solid white;
+}
+
+.manage2 {
+  color: white;
+  font-family: "Marck Script", cursive;
+  font-size: 50px;
+  position: relative;
+  text-decoration: none;
+}
+
+.manage2:hover:after {
+  content: "";
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  bottom: 0;
+  border: 1px solid white;
+}
+/* index-admin */
+
+.admin-wraper {
+  display: flex;
+}
+
+.jenesaisplusdansindexadmin {
+  margin-right: 40px;
+  margin-top: 40px;
+}
+
+/* admin/concert */
+.general-admin-concert-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.management-title {
+  font-family: "Marck Script", cursive;
+  font-size: 50px;
+}
+
+.add-concert-btn {
+  background: none;
+  border: white 1px solid;
+  border-radius: 30px;
+  font-family: "Red Hat Display", sans-serif;
+  margin-bottom: 30px;
+  padding: 15px;
+}
+
+.add-concert-btn:hover {
+  transform: scale(1.1);
+}
+
+.management-container {
+  border: white 1px solid;
+  border-radius: 20px;
+  width: 50vw;
+  padding: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.all-concerts {
+  border: white 1px solid;
+  border-radius: 20px;
+  width: 50vw;
+  text-align: center;
+  padding: 30px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.edit-concert-btn-admin {
+  border: white 1px solid;
+  border-radius: 30px;
+  width: 50vw;
+  text-align: center;
+  padding: 20px;
+  background: none;
+  font-family: "Red Hat Display", sans-serif;
+  margin-top: 40px;
+  margin-right: 40px;
+}
+
+.edit-concert-user {
+  border: white 1px solid;
+  border-radius: 30px;
+  text-align: center;
+  padding: 20px;
+  background: none;
+  font-family: "Red Hat Display", sans-serif;
+  margin-top: 40px;
+  margin-right: 40px;
+}
+.text-info-admin-concert {
+  color: white;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 20px;
+}
+
+.text-info-admin-concert2 {
+  margin-bottom: 30px;
+  color: white;
+  font-size: 20px;
+}
+
+.delete-btn-admin {
+  text-decoration: none;
+  background: linear-gradient(to right, #ff7c00 40%, #ffbe45 60%);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-size: 20px;
+  height: 70px;
+  width: 100px;
+}
+
+.delete-btn-admin:hover {
+  transform: scale(1.1);
+}
+
+.delete-btn-admin:focus {
+  outline: 0;
+}
