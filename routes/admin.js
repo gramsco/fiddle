@@ -13,23 +13,25 @@ const days = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi"]
 
 
 router.get("/", (req, res) => {
-  musicianModel
-    .count()
-    .then(nMusicians => {
-      concertModel
-        .count()
-        .then(nConcerts => {
-          critiqueModel
-            .count()
-            .then(nCritiques => {
-              userModel
-                .count()
-                .then(nUsers => {
-                  res.render("admin/index", { nMusicians, nConcerts, nCritiques, nUsers });
-                })
-            })
-        })
-    })
+
+  res.send("nothing to see here")
+  // musicianModel
+  //   .count()
+  //   .then(nMusicians => {
+  //     concertModel
+  //       .count()
+  //       .then(nConcerts => {
+  //         critiqueModel
+  //           .count()
+  //           .then(nCritiques => {
+  //             userModel
+  //               .count()
+  //               .then(nUsers => {
+  //                 res.render("admin/index", { nMusicians, nConcerts, nCritiques, nUsers });
+  //               })
+  //           })
+  //       })
+  //   })
 
 });
 
